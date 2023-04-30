@@ -8,10 +8,10 @@ public class AlgoritmoGenetico {
     private static final int NUMERO_ITERAZIONI = 60;
 
     public static void run() {
-        Popolazione generazione = Popolazione.getPopolazioneRandom();
+        Popolazione generazione = Popolazione.creaPopolazioneCasuale();
 
         for (int i = 0; i < NUMERO_ITERAZIONI; i++) {
-            Popolazione nuovaGenerazione = Popolazione.getPopolazioneVuota();
+            Popolazione nuovaGenerazione = Popolazione.creaPopolazioneVuota();
 
             while (!nuovaGenerazione.haStessaDimensioneDi(generazione)) {
                 CoppiaDiRetiCombinatorie coppiaDiIndividui = generazione.selezionaCoppiaDiIndividui();
