@@ -16,7 +16,7 @@ public class Popolazione {
     public static Popolazione creaPopolazioneCasuale() {
         var popolazione = new Popolazione();
         for (int i = 0; i < DIM_POPOLAZIONE; i++) {
-            popolazione.listaDiReti.add(new ReteCombinatoria(i+1));
+            popolazione.listaDiReti.add(new ReteCombinatoria(i));
         }
         return popolazione;
     }
