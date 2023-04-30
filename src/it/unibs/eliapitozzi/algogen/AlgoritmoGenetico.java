@@ -14,16 +14,12 @@ public class AlgoritmoGenetico {
             Popolazione nuovaGenerazione = Popolazione.getPopolazioneVuota();
 
             while (!nuovaGenerazione.haStessaDimensioneDi(generazione)) {
-                ReteCombinatoria individuo1 = generazione.selezionaIndividuo();
-                ReteCombinatoria individuo2 = generazione.selezionaIndividuo();
+                CoppiaDiRetiCombinatorie coppiaDiIndividui = generazione.selezionaCoppiaDiIndividui();
 
-                individuo1.crossover(individuo2);
+                coppiaDiIndividui.crossover();
+                coppiaDiIndividui.mutation();
 
-                individuo1.mutation();
-                individuo2.mutation();
-
-                nuovaGenerazione.inserisci(individuo1);
-                nuovaGenerazione.inserisci(individuo2);
+                nuovaGenerazione.inserisciCoppiaDiIndividui(coppiaDiIndividui);
             }
 
             generazione = nuovaGenerazione;

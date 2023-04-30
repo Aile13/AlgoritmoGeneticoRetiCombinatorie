@@ -15,7 +15,7 @@ public class Popolazione {
         return null;
     }
 
-    public ReteCombinatoria selezionaIndividuo() {
+    public CoppiaDiRetiCombinatorie selezionaCoppiaDiIndividui() {
         return null;
     }
 
@@ -23,7 +23,7 @@ public class Popolazione {
         return false;
     }
 
-    public void inserisci(ReteCombinatoria individuoDaInserire) {
+    public void inserisciCoppiaDiIndividui(CoppiaDiRetiCombinatorie coppiaDiIndividuiDaInserire) {
 
     }
 }
