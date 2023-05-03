@@ -3,5 +3,5 @@ package it.unibs.eliapitozzi.algogen.caratteri;
 /**
  * @author Elia
  */
-public class Filo extends PortaUnaria {
+public abstract class PortaUnaria implements Carattere {
 }
