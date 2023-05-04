@@ -16,8 +16,8 @@ public class AlgoritmoGenetico {
             while (!nuovaGenerazione.haStessaDimensioneDi(generazione)) {
                 CoppiaDiRetiCombinatorie coppiaDiIndividui = generazione.selezionaCoppiaDiIndividui();
 
-                coppiaDiIndividui.crossover();
-                coppiaDiIndividui.mutation();
+                coppiaDiIndividui = coppiaDiIndividui.crossover();
+                coppiaDiIndividui = coppiaDiIndividui.mutation();
 
                 nuovaGenerazione.inserisciCoppiaDiIndividui(coppiaDiIndividui);
             }

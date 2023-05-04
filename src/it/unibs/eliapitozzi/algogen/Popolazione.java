@@ -1,6 +1,7 @@
 package it.unibs.eliapitozzi.algogen;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -27,7 +28,18 @@ public class Popolazione {
     }
 
     public CoppiaDiRetiCombinatorie selezionaCoppiaDiIndividui() {
-        return null;
+        var matingPool = new ArrayList<ReteCombinatoria>();
+
+        for (ReteCombinatoria reteCombinatoria : listaDiReti) {
+            var n = Math.round(reteCombinatoria.fitness()) * 100;
+
+            for (int i = 0; i < n; i++) {
+                matingPool.add(reteCombinatoria);
+            }
+        }
+
+        Collections.shuffle(matingPool);
+        return new CoppiaDiRetiCombinatorie(matingPool.get(0), matingPool.get(1));
     }
 
     public boolean haStessaDimensioneDi(Popolazione generazioneDiConfronto) {

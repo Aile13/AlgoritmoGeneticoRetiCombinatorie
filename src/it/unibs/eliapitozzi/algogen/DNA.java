@@ -143,11 +143,6 @@ public class DNA {
         ingresso();
     }
 
-    private void aggiungiDueIngressi() {
-        ingresso();
-        ingresso();
-    }
-
     private void nomePortaUnaria() {
         if (Math.random() < 0.5) {
             geni.add(new Filo());
@@ -161,4 +156,13 @@ public class DNA {
         geni.add(new Ingresso(numeroIngresso));
     }
 
+    // TODO: 04/mag/2023 questa tecnicamente è l'ultima. 
+    public void mutation() {
+        
+    }
+
+    // TODO: 04/mag/2023 questa è l'operazione successiva. 
+    public CoppiaDiDNA crossover(DNA dnaPartner) {
+        return null;
+    }
 }
