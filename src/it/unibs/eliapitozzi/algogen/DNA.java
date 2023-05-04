@@ -15,7 +15,6 @@ public class DNA {
 
 
     public DNA(int numeroDiRicorsioni) {
-
         inizializzaDNA(numeroDiRicorsioni);
     }
 
@@ -37,7 +36,7 @@ public class DNA {
             portaBinariaTerminale();
         } else if (numeroDiRicorsioni == 2) {
             portaBinariaSemiRicorsiva(numeroDiRicorsioni);
-        } else if (numeroDiRicorsioni == 3) {
+        } else if (numeroDiRicorsioni >= 3) {
             if (Math.random() < 0.5) {
                 portaBinariaSemiRicorsiva(numeroDiRicorsioni);
             } else {
@@ -50,36 +49,72 @@ public class DNA {
         nomePortaBinaria();
         numeroDiRicorsioni--;
         if (numeroDiRicorsioni == 2) {
-            nomePortaUnaria();
-            portaBinariaTerminale();
-            nomePortaUnaria();
-            portaBinariaTerminale();
-        } else if (numeroDiRicorsioni == 3) {
-            nomePortaUnaria();
-            portaBinariaSemiRicorsiva(1);
-            nomePortaUnaria();
-            portaUnariaTerminale();
-        } else if (numeroDiRicorsioni == 4) {
-            nomePortaUnaria();
-            portaBinariaSemiRicorsiva(1);
-            nomePortaUnaria();
-            portaBinariaSemiRicorsiva(1);
-        } else if (numeroDiRicorsioni == 5) {
-            nomePortaUnaria();
-            portaBinariaRicorsiva(2);
-            nomePortaUnaria();
-            portaBinariaSemiRicorsiva(1);
-        } else if (numeroDiRicorsioni == 6) {
-            nomePortaUnaria();
-            portaBinariaRicorsiva(2);
-            nomePortaUnaria();
-            portaBinariaRicorsiva(2);
-        } else {
-            // TODO: 03/mag/2023 quindi qui ci vanno i casi con 7 o più porte binarie da combinare anche ricorsivamente
-            //bisogna selezionare uno dei quattro metodi ricorsivi previsti.
-            // bisogna adattare per i casi ricorsivi a valutare in maniera casuale equa
-            // un caso che loro riescono a gestire es >= tot. si .
+            variante1();
+        } else if (numeroDiRicorsioni >= 6) {
+            switch (NumeriCasuali.estraiIntero(2, 5)) {
+                case 2:
+                    variante2();
+                case 3:
+                    variante3();
+                case 4:
+                    variante4();
+                case 5:
+                    variante5();
+            }
+        } else if (numeroDiRicorsioni >= 5) {
+            switch (NumeriCasuali.estraiIntero(2, 4)) {
+                case 2:
+                    variante2();
+                case 3:
+                    variante3();
+                case 4:
+                    variante4();
+            }
+        } else if (numeroDiRicorsioni >= 4) {
+            switch (NumeriCasuali.estraiIntero(2, 3)) {
+                case 2:
+                    variante2();
+                case 3:
+                    variante3();
+            }
+        } else if (numeroDiRicorsioni >= 3) {
+            variante2();
         }
+    }
+
+    private void variante5() {
+        nomePortaUnaria();
+        portaBinariaRicorsiva(2);
+        nomePortaUnaria();
+        portaBinariaRicorsiva(2);
+    }
+
+    private void variante4() {
+        nomePortaUnaria();
+        portaBinariaRicorsiva(2);
+        nomePortaUnaria();
+        portaBinariaSemiRicorsiva(1);
+    }
+
+    private void variante3() {
+        nomePortaUnaria();
+        portaBinariaSemiRicorsiva(1);
+        nomePortaUnaria();
+        portaBinariaSemiRicorsiva(1);
+    }
+
+    private void variante2() {
+        nomePortaUnaria();
+        portaBinariaSemiRicorsiva(1);
+        nomePortaUnaria();
+        portaUnariaTerminale();
+    }
+
+    private void variante1() {
+        nomePortaUnaria();
+        portaBinariaTerminale();
+        nomePortaUnaria();
+        portaBinariaTerminale();
     }
 
     private void portaBinariaSemiRicorsiva(int numeroDiRicorsioni) {

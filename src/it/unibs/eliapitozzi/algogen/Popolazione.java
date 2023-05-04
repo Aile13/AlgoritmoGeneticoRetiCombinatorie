@@ -8,6 +8,7 @@ import java.util.List;
  */
 public class Popolazione {
     private static final int DIM_POPOLAZIONE = 50;
+    private static final int MAX_NUM_ITERAZIONI = 30;
     private final List<ReteCombinatoria> listaDiReti = new ArrayList<>();
 
     private Popolazione() {
@@ -16,7 +17,7 @@ public class Popolazione {
     public static Popolazione creaPopolazioneCasuale() {
         var popolazione = new Popolazione();
         for (int i = 0; i < DIM_POPOLAZIONE; i++) {
-            popolazione.listaDiReti.add(new ReteCombinatoria(i));
+            popolazione.listaDiReti.add(new ReteCombinatoria(i % MAX_NUM_ITERAZIONI));
         }
         return popolazione;
     }
