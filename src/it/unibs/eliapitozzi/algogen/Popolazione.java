@@ -27,11 +27,15 @@ public class Popolazione {
         return new Popolazione();
     }
 
-    public CoppiaDiRetiCombinatorie selezionaCoppiaDiIndividui() {
+    public CoppiaDiRetiCombinatorie selezionaCoppiaDiIndividui(TabellaDiVerita tabellaDiVerita) {
         var matingPool = new ArrayList<ReteCombinatoria>();
+        var totalRawFitness = 0.;
+        for (ReteCombinatoria reteCombinatoria : listaDiReti) {
+            totalRawFitness += reteCombinatoria.rawFitness(tabellaDiVerita);
+        }
 
         for (ReteCombinatoria reteCombinatoria : listaDiReti) {
-            var n = Math.round(reteCombinatoria.fitness()) * 100;
+            var n = Math.round(reteCombinatoria.rawFitness(tabellaDiVerita) / totalRawFitness * 100);
 
             for (int i = 0; i < n; i++) {
                 matingPool.add(reteCombinatoria);

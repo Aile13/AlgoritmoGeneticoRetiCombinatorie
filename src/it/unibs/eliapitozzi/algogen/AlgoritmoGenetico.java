@@ -7,14 +7,14 @@ public class AlgoritmoGenetico {
 
     private static final int NUMERO_ITERAZIONI = 60;
 
-    public static void run() {
+    public static void run(TabellaDiVerita tabellaDiVerita) {
         Popolazione generazione = Popolazione.creaPopolazioneCasuale();
 
         for (int i = 0; i < NUMERO_ITERAZIONI; i++) {
             Popolazione nuovaGenerazione = Popolazione.creaPopolazioneVuota();
 
             while (!nuovaGenerazione.haStessaDimensioneDi(generazione)) {
-                CoppiaDiRetiCombinatorie coppiaDiIndividui = generazione.selezionaCoppiaDiIndividui();
+                CoppiaDiRetiCombinatorie coppiaDiIndividui = generazione.selezionaCoppiaDiIndividui(tabellaDiVerita);
 
                 coppiaDiIndividui = coppiaDiIndividui.crossover();
                 coppiaDiIndividui = coppiaDiIndividui.mutation();

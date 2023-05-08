@@ -10,7 +10,12 @@ import java.util.List;
  * @author Elia
  */
 public class DNA {
-    private static final int NUMERO_INGRESSI = 8;
+    private static final int NUMERO_INGRESSI = 3;
+
+    public List<Carattere> getGeni() {
+        return geni;
+    }
+
     private final List<Carattere> geni = new ArrayList<>();
 
 
