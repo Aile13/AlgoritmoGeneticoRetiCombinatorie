@@ -58,59 +58,65 @@ public class DNA {
         } else if (numeroDiRicorsioni >= 6) {
             switch (NumeriCasuali.estraiIntero(2, 5)) {
                 case 2:
-                    variante2();
+                    variante2(numeroDiRicorsioni);
                 case 3:
-                    variante3();
+                    variante3(numeroDiRicorsioni);
                 case 4:
-                    variante4();
+                    variante4(numeroDiRicorsioni);
                 case 5:
-                    variante5();
+                    variante5(numeroDiRicorsioni);
             }
         } else if (numeroDiRicorsioni >= 5) {
             switch (NumeriCasuali.estraiIntero(2, 4)) {
                 case 2:
-                    variante2();
+                    variante2(numeroDiRicorsioni);
                 case 3:
-                    variante3();
+                    variante3(numeroDiRicorsioni);
                 case 4:
-                    variante4();
+                    variante4(numeroDiRicorsioni);
             }
         } else if (numeroDiRicorsioni >= 4) {
             switch (NumeriCasuali.estraiIntero(2, 3)) {
                 case 2:
-                    variante2();
+                    variante2(numeroDiRicorsioni);
                 case 3:
-                    variante3();
+                    variante3(numeroDiRicorsioni);
             }
         } else if (numeroDiRicorsioni >= 3) {
-            variante2();
+            variante2(numeroDiRicorsioni);
         }
     }
 
-    private void variante5() {
+    private void variante5(int numeroDiRicorsioni) {
         nomePortaUnaria();
+        int sottoNumDiRicorsioni = NumeriCasuali.estraiIntero(3, numeroDiRicorsioni-3);
         portaBinariaRicorsiva(2);
         nomePortaUnaria();
-        portaBinariaRicorsiva(2);
+        int sottoNumDiRicorsioniRestanti = numeroDiRicorsioni - sottoNumDiRicorsioni;
+        portaBinariaRicorsiva(sottoNumDiRicorsioniRestanti);
     }
 
-    private void variante4() {
+    private void variante4(int numeroDiRicorsioni) {
         nomePortaUnaria();
-        portaBinariaRicorsiva(2);
+        int sottoNumDiRicorsioni = NumeriCasuali.estraiIntero(3, numeroDiRicorsioni-2);
+        portaBinariaRicorsiva(sottoNumDiRicorsioni);
         nomePortaUnaria();
-        portaBinariaSemiRicorsiva(1);
+        int sottoNumDiRicorsioniRestanti = numeroDiRicorsioni - sottoNumDiRicorsioni;
+        portaBinariaSemiRicorsiva(sottoNumDiRicorsioniRestanti);
     }
 
-    private void variante3() {
+    private void variante3(int numeroDiRicorsioni) {
         nomePortaUnaria();
-        portaBinariaSemiRicorsiva(1);
+        int sottoNumDiRicorsioni = NumeriCasuali.estraiIntero(2, numeroDiRicorsioni-2);
+        portaBinariaSemiRicorsiva(sottoNumDiRicorsioni);
         nomePortaUnaria();
-        portaBinariaSemiRicorsiva(1);
+        int sottoNumDiRicorsioniRestanti = numeroDiRicorsioni - sottoNumDiRicorsioni;
+        portaBinariaSemiRicorsiva(sottoNumDiRicorsioniRestanti);
     }
 
-    private void variante2() {
+    private void variante2(int numeroDiRicorsioni) {
         nomePortaUnaria();
-        portaBinariaSemiRicorsiva(1);
+        portaBinariaSemiRicorsiva(numeroDiRicorsioni);
         nomePortaUnaria();
         portaUnariaTerminale();
     }
