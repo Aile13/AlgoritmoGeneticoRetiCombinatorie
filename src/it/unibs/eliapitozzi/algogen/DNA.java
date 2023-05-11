@@ -57,30 +57,21 @@ public class DNA {
             variante1();
         } else if (numeroDiRicorsioni >= 6) {
             switch (NumeriCasuali.estraiIntero(2, 5)) {
-                case 2:
-                    variante2(numeroDiRicorsioni);
-                case 3:
-                    variante3(numeroDiRicorsioni);
-                case 4:
-                    variante4(numeroDiRicorsioni);
-                case 5:
-                    variante5(numeroDiRicorsioni);
+                case 2 -> variante2(numeroDiRicorsioni);
+                case 3 -> variante3(numeroDiRicorsioni);
+                case 4 -> variante4(numeroDiRicorsioni);
+                case 5 -> variante5(numeroDiRicorsioni);
             }
         } else if (numeroDiRicorsioni >= 5) {
             switch (NumeriCasuali.estraiIntero(2, 4)) {
-                case 2:
-                    variante2(numeroDiRicorsioni);
-                case 3:
-                    variante3(numeroDiRicorsioni);
-                case 4:
-                    variante4(numeroDiRicorsioni);
+                case 2 -> variante2(numeroDiRicorsioni);
+                case 3 -> variante3(numeroDiRicorsioni);
+                case 4 -> variante4(numeroDiRicorsioni);
             }
         } else if (numeroDiRicorsioni >= 4) {
             switch (NumeriCasuali.estraiIntero(2, 3)) {
-                case 2:
-                    variante2(numeroDiRicorsioni);
-                case 3:
-                    variante3(numeroDiRicorsioni);
+                case 2 -> variante2(numeroDiRicorsioni);
+                case 3 -> variante3(numeroDiRicorsioni);
             }
         } else if (numeroDiRicorsioni >= 3) {
             variante2(numeroDiRicorsioni);
