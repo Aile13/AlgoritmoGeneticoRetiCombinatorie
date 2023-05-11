@@ -90,7 +90,7 @@ public class DNA {
     private void variante5(int numeroDiRicorsioni) {
         nomePortaUnaria();
         int sottoNumDiRicorsioni = NumeriCasuali.estraiIntero(3, numeroDiRicorsioni - 3);
-        portaBinariaRicorsiva(2);
+        portaBinariaRicorsiva(sottoNumDiRicorsioni);
         nomePortaUnaria();
         int sottoNumDiRicorsioniRestanti = numeroDiRicorsioni - sottoNumDiRicorsioni;
         portaBinariaRicorsiva(sottoNumDiRicorsioniRestanti);
