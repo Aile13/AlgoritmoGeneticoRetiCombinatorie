@@ -89,7 +89,7 @@ public class DNA {
 
     private void variante5(int numeroDiRicorsioni) {
         nomePortaUnaria();
-        int sottoNumDiRicorsioni = NumeriCasuali.estraiIntero(3, numeroDiRicorsioni-3);
+        int sottoNumDiRicorsioni = NumeriCasuali.estraiIntero(3, numeroDiRicorsioni - 3);
         portaBinariaRicorsiva(2);
         nomePortaUnaria();
         int sottoNumDiRicorsioniRestanti = numeroDiRicorsioni - sottoNumDiRicorsioni;
@@ -98,7 +98,7 @@ public class DNA {
 
     private void variante4(int numeroDiRicorsioni) {
         nomePortaUnaria();
-        int sottoNumDiRicorsioni = NumeriCasuali.estraiIntero(3, numeroDiRicorsioni-2);
+        int sottoNumDiRicorsioni = NumeriCasuali.estraiIntero(3, numeroDiRicorsioni - 2);
         portaBinariaRicorsiva(sottoNumDiRicorsioni);
         nomePortaUnaria();
         int sottoNumDiRicorsioniRestanti = numeroDiRicorsioni - sottoNumDiRicorsioni;
@@ -107,7 +107,7 @@ public class DNA {
 
     private void variante3(int numeroDiRicorsioni) {
         nomePortaUnaria();
-        int sottoNumDiRicorsioni = NumeriCasuali.estraiIntero(2, numeroDiRicorsioni-2);
+        int sottoNumDiRicorsioni = NumeriCasuali.estraiIntero(2, numeroDiRicorsioni - 2);
         portaBinariaSemiRicorsiva(sottoNumDiRicorsioni);
         nomePortaUnaria();
         int sottoNumDiRicorsioniRestanti = numeroDiRicorsioni - sottoNumDiRicorsioni;
@@ -117,7 +117,6 @@ public class DNA {
     private void variante2(int numeroDiRicorsioni) {
         nomePortaUnaria();
         portaBinariaSemiRicorsiva(numeroDiRicorsioni);
-        nomePortaUnaria();
         portaUnariaTerminale();
     }
 
@@ -169,7 +168,7 @@ public class DNA {
 
     // TODO: 04/mag/2023 questa tecnicamente è l'ultima. 
     public void mutation() {
-        
+
     }
 
     // TODO: 04/mag/2023 questa è l'operazione successiva. 

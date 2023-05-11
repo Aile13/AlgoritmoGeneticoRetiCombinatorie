@@ -10,6 +10,7 @@ import java.util.List;
 public class ReteCombinatoria {
     private DNA dna;
     private PortaUnaria program;
+
     public ReteCombinatoria(int numeroDiRicorsioni) {
         this.dna = new DNA(numeroDiRicorsioni);
     }
@@ -26,8 +27,7 @@ public class ReteCombinatoria {
                 righeCorrette++;
         }
 
-        double punteggio = Math.pow(2. , (double) righeCorrette / tabellaDiVerita.getTotaleRighe());
-        return punteggio;
+        return Math.pow(2., (double) righeCorrette / tabellaDiVerita.getTotaleRighe());
     }
 
     private void assemblaRete() {
@@ -57,9 +57,7 @@ public class ReteCombinatoria {
     }
 
     private Carattere next(List<Carattere> caratteri) {
-        Carattere next = caratteri.get(0);
-        caratteri.remove(0);
-        return next;
+        return caratteri.remove(0);
     }
 
     private Carattere view(List<Carattere> caratteri) {
