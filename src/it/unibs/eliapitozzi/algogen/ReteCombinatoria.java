@@ -13,11 +13,11 @@ public class ReteCombinatoria {
 
     public ReteCombinatoria(int numeroDiRicorsioni) {
         this.dna = new DNA(numeroDiRicorsioni);
+        assemblaRete();
     }
 
     // TODO: 04/mag/2023 questa è la prox cosa da fare. a meno di piccole cose è fatta.
     public double rawFitness(TabellaDiVerita tabellaDiVerita) {
-        assemblaRete();
 
         int righeCorrette = 0;
         for (RigaTabella rigaTabella : tabellaDiVerita.getRigheTabella()) {

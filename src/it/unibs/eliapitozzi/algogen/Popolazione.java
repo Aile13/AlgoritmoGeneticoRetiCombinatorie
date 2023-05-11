@@ -8,7 +8,7 @@ import java.util.List;
  * @author Elia
  */
 public class Popolazione {
-    private static final int DIM_POPOLAZIONE = 50;
+    private static final int DIM_POPOLAZIONE = 6;
     private static final int MAX_NUM_ITERAZIONI = 30;
     private final List<ReteCombinatoria> listaDiReti = new ArrayList<>();
 
@@ -27,7 +27,8 @@ public class Popolazione {
         return new Popolazione();
     }
 
-    public CoppiaDiRetiCombinatorie selezionaCoppiaDiIndividui(TabellaDiVerita tabellaDiVerita) {
+    public CoppiaDiRetiCombinatorie
+    selezionaCoppiaDiIndividui(TabellaDiVerita tabellaDiVerita) {
         var matingPool = new ArrayList<ReteCombinatoria>();
         var totalRawFitness = 0.;
         for (ReteCombinatoria reteCombinatoria : listaDiReti) {
