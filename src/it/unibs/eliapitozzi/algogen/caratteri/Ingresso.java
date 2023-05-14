@@ -16,4 +16,9 @@ public class Ingresso implements IngressoPortaUnaria {
     public boolean computaOutput(RigaTabella rigaTabella) {
         return rigaTabella.getValoreIngressoByNumero(numeroIngresso);
     }
+
+    @Override
+    public boolean isStessoTipo(Carattere carattere) {
+        return carattere instanceof Ingresso;
+    }
 }

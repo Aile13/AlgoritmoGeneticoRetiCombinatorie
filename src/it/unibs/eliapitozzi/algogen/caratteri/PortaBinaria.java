@@ -24,4 +24,9 @@ public abstract class PortaBinaria implements IngressoPortaUnaria {
     protected boolean computaOutputDiSecondoIngresso(RigaTabella rigaTabella) {
         return secondoIngresso.computaOutput(rigaTabella);
     }
+
+    @Override
+    public boolean isStessoTipo(Carattere carattere) {
+        return carattere instanceof PortaBinaria;
+    }
 }

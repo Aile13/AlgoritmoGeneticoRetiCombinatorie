@@ -7,4 +7,6 @@ import it.unibs.eliapitozzi.algogen.RigaTabella;
  */
 public interface Carattere {
     boolean computaOutput(RigaTabella rigaTabella);
+
+    boolean isStessoTipo(Carattere carattere);
 }

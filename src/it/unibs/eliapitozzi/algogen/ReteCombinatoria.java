@@ -67,10 +67,11 @@ public class ReteCombinatoria {
     }
 
     public CoppiaDiRetiCombinatorie crossover(ReteCombinatoria reteCombinatoriaPartner) {
-        CoppiaDiDNA crossover = this.dna.crossover(reteCombinatoriaPartner.dna);
-
-        this.dna = crossover.getDna1();
-        reteCombinatoriaPartner.dna = crossover.getDna2();
+        if (Math.random() < 0.75) {
+            CoppiaDiDNA crossover = this.dna.crossover(reteCombinatoriaPartner.dna);
+            this.dna = crossover.getDna1();
+            reteCombinatoriaPartner.dna = crossover.getDna2();
+        }
 
         return new CoppiaDiRetiCombinatorie(this, reteCombinatoriaPartner);
     }

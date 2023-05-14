@@ -14,6 +14,9 @@ public class DNA {
 
     private final List<Carattere> geni = new ArrayList<>();
 
+    public DNA() {
+    }
+
     public List<Carattere> getGeni() {
         return geni;
     }
@@ -159,11 +162,28 @@ public class DNA {
 
     // TODO: 04/mag/2023 questa tecnicamente è l'ultima. 
     public void mutation() {
-
+        
     }
 
-    // TODO: 04/mag/2023 questa è l'operazione successiva. 
+    // TODO: 04/mag/2023 questa è l'operazione successiva. Dovremmo esserci.
     public CoppiaDiDNA crossover(DNA dnaPartner) {
-        return null;
+        int numeroCaratteriCompatibili = 0;
+        int dimensioneMinimaDNA = Math.min(this.getGeni().size(), dnaPartner.getGeni().size());
+
+        for (int i = 0; i < dimensioneMinimaDNA; i++) {
+            if (this.getGeni().get(i).isStessoTipo(dnaPartner.getGeni().get(i))) {
+                numeroCaratteriCompatibili++;
+            } else break;
+        }
+
+        DNA primoFiglio = new DNA();
+        primoFiglio.getGeni().addAll(this.getGeni().subList(0, numeroCaratteriCompatibili));
+        primoFiglio.getGeni().addAll(dnaPartner.getGeni().subList(numeroCaratteriCompatibili, dnaPartner.getGeni().size()));
+
+        DNA secondoFiglio = new DNA();
+        secondoFiglio.getGeni().addAll(dnaPartner.getGeni().subList(0, numeroCaratteriCompatibili));
+        secondoFiglio.getGeni().addAll(this.getGeni().subList(numeroCaratteriCompatibili, this.getGeni().size()));
+
+        return new CoppiaDiDNA(primoFiglio, secondoFiglio);
     }
 }

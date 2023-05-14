@@ -14,4 +14,9 @@ public abstract class PortaUnaria implements Carattere {
     protected boolean computaOutputDiIngresso(RigaTabella rigaTabella) {
         return ingresso.computaOutput(rigaTabella);
     }
+
+    @Override
+    public boolean isStessoTipo(Carattere carattere) {
+        return carattere instanceof PortaUnaria;
+    }
 }
