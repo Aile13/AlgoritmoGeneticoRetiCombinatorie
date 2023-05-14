@@ -162,7 +162,7 @@ public class DNA {
 
     // TODO: 04/mag/2023 questa tecnicamente è l'ultima. 
     public void mutation() {
-        
+
     }
 
     // TODO: 04/mag/2023 questa è l'operazione successiva. Dovremmo esserci.

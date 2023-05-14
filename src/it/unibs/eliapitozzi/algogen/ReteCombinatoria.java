@@ -1,8 +1,10 @@
 package it.unibs.eliapitozzi.algogen;
 
-import it.unibs.eliapitozzi.algogen.caratteri.*;
+import it.unibs.eliapitozzi.algogen.caratteri.Carattere;
+import it.unibs.eliapitozzi.algogen.caratteri.Ingresso;
+import it.unibs.eliapitozzi.algogen.caratteri.PortaBinaria;
+import it.unibs.eliapitozzi.algogen.caratteri.PortaUnaria;
 
-import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -77,6 +79,9 @@ public class ReteCombinatoria {
     }
 
     public void mutation() {
-        this.dna.mutation();
+        if (Math.random() < 0.01) {
+            this.dna.mutation();
+        }
     }
+
 }
