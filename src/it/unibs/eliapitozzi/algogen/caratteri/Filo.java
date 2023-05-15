@@ -11,4 +11,9 @@ public class Filo extends PortaUnaria {
     public boolean computaOutput(RigaTabella rigaTabella) {
         return super.computaOutputDiIngresso(rigaTabella);
     }
+
+    @Override
+    public void mutation() {
+
+    }
 }

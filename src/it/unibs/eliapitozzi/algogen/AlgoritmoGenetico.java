@@ -22,6 +22,7 @@ public class AlgoritmoGenetico {
                 nuovaGenerazione.inserisciCoppiaDiIndividui(coppiaDiIndividui);
             }
 
+
             generazione = nuovaGenerazione;
         }
 

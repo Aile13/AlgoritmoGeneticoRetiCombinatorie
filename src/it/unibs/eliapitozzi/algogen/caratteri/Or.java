@@ -10,4 +10,9 @@ public class Or extends PortaBinaria {
     public boolean computaOutput(RigaTabella rigaTabella) {
         return super.computaOutputDiPrimoIngresso(rigaTabella) || super.computaOutputDiSecondoIngresso(rigaTabella);
     }
+
+    @Override
+    public void mutation() {
+
+    }
 }

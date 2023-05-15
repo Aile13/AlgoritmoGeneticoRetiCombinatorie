@@ -160,9 +160,13 @@ public class DNA {
         geni.add(new Ingresso(numeroIngresso));
     }
 
-    // TODO: 04/mag/2023 questa tecnicamente è l'ultima. 
+    // TODO: 04/mag/2023 questa tecnicamente è l'ultima.
     public void mutation() {
-
+        for (Carattere carattere : this.getGeni()) {
+            if (Math.random() < 0.01) {
+                carattere.mutation();
+            }
+        }
     }
 
     // TODO: 04/mag/2023 questa è l'operazione successiva. Dovremmo esserci.

@@ -79,9 +79,7 @@ public class ReteCombinatoria {
     }
 
     public void mutation() {
-        if (Math.random() < 0.01) {
-            this.dna.mutation();
-        }
+        this.dna.mutation();
     }
 
 }

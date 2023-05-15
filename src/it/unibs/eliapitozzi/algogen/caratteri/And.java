@@ -11,4 +11,9 @@ public class And extends PortaBinaria {
         return super.computaOutputDiPrimoIngresso(rigaTabella) && super.computaOutputDiSecondoIngresso(rigaTabella);
 
     }
+
+    @Override
+    public void mutation() {
+
+    }
 }

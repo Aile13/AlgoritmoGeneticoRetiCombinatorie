@@ -9,4 +9,6 @@ public interface Carattere {
     boolean computaOutput(RigaTabella rigaTabella);
 
     boolean isStessoTipo(Carattere carattere);
+
+    void mutation();
 }

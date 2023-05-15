@@ -5,7 +5,7 @@ import it.unibs.eliapitozzi.algogen.RigaTabella;
 /**
  * @author Elia
  */
-public abstract class PortaUnaria implements Carattere {
+public abstract class PortaUnaria implements IngressoPortaBinaria {
     private IngressoPortaUnaria ingresso;
     public void aggiungiIngresso(IngressoPortaUnaria ingresso) {
         this.ingresso = ingresso;
