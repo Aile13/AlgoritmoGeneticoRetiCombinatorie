@@ -162,9 +162,9 @@ public class DNA {
 
     //TODO: 04/mag/2023 questa tecnicamente è l'ultima.
     public void mutation() {
-        for (Carattere carattere : this.getGeni()) {
+        for (int i = 0; i < this.getGeni().size(); i++) {
             if (Math.random() < 0.01) {
-                carattere = carattere.mutation();
+                this.getGeni().set(i, this.getGeni().get(i).mutation());
             }
         }
     }

@@ -13,6 +13,8 @@ public class AlgoritmoGenetico {
         for (int i = 0; i < NUMERO_ITERAZIONI; i++) {
             Popolazione nuovaGenerazione = Popolazione.creaPopolazioneVuota();
 
+            generazione.mostraInfo();
+
             while (!nuovaGenerazione.haStessaDimensioneDi(generazione)) {
                 CoppiaDiRetiCombinatorie coppiaDiIndividui = generazione.selezionaCoppiaDiIndividui(tabellaDiVerita);
 

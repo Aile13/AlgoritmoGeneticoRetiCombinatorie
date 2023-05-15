@@ -55,4 +55,10 @@ public class Popolazione {
         this.listaDiReti.add(coppiaDiIndividuiDaInserire.getReteCombinatoria1());
         this.listaDiReti.add(coppiaDiIndividuiDaInserire.getReteCombinatoria2());
     }
+
+    // TODO: 15/mag/2023 questo serve ora, dobbiamo mostrare info circa popolazione corrente,
+    // punteggio medio, puntenggio migliore etc...
+    public void mostraInfo() {
+
+    }
 }
