@@ -12,7 +12,7 @@ public class Not extends PortaUnaria {
     }
 
     @Override
-    public void mutation() {
-
+    public Carattere mutation() {
+        return new Filo();
     }
 }

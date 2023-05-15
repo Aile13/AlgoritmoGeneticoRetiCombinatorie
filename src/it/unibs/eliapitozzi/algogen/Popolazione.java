@@ -8,7 +8,7 @@ import java.util.List;
  * @author Elia
  */
 public class Popolazione {
-    private static final int DIM_POPOLAZIONE = 6;
+    private static final int DIM_POPOLAZIONE = 50;
     private static final int MAX_NUM_ITERAZIONI = 30;
     private final List<ReteCombinatoria> listaDiReti = new ArrayList<>();
 
@@ -52,6 +52,7 @@ public class Popolazione {
     }
 
     public void inserisciCoppiaDiIndividui(CoppiaDiRetiCombinatorie coppiaDiIndividuiDaInserire) {
-
+        this.listaDiReti.add(coppiaDiIndividuiDaInserire.getReteCombinatoria1());
+        this.listaDiReti.add(coppiaDiIndividuiDaInserire.getReteCombinatoria2());
     }
 }

@@ -12,6 +12,14 @@ public class CoppiaDiRetiCombinatorie {
         this.reteCombinatoria2 = reteCombinatoria2;
     }
 
+    public ReteCombinatoria getReteCombinatoria1() {
+        return reteCombinatoria1;
+    }
+
+    public ReteCombinatoria getReteCombinatoria2() {
+        return reteCombinatoria2;
+    }
+
     public CoppiaDiRetiCombinatorie crossover() {
         return reteCombinatoria1.crossover(reteCombinatoria1);
     }

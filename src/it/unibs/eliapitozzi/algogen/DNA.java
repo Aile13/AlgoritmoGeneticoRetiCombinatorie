@@ -10,7 +10,7 @@ import java.util.List;
  * @author Elia
  */
 public class DNA {
-    private static final int NUMERO_INGRESSI = 8;
+    public static final int NUMERO_INGRESSI = 8;
 
     private final List<Carattere> geni = new ArrayList<>();
 
@@ -160,16 +160,16 @@ public class DNA {
         geni.add(new Ingresso(numeroIngresso));
     }
 
-    // TODO: 04/mag/2023 questa tecnicamente è l'ultima.
+    //TODO: 04/mag/2023 questa tecnicamente è l'ultima.
     public void mutation() {
         for (Carattere carattere : this.getGeni()) {
             if (Math.random() < 0.01) {
-                carattere.mutation();
+                carattere = carattere.mutation();
             }
         }
     }
 
-    // TODO: 04/mag/2023 questa è l'operazione successiva. Dovremmo esserci.
+    //TODO: 04/mag/2023 questa è l'operazione successiva. Dovremmo esserci.
     public CoppiaDiDNA crossover(DNA dnaPartner) {
         int numeroCaratteriCompatibili = 0;
         int dimensioneMinimaDNA = Math.min(this.getGeni().size(), dnaPartner.getGeni().size());

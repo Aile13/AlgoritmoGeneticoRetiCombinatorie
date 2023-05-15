@@ -7,6 +7,7 @@ import it.unibs.eliapitozzi.algogen.RigaTabella;
  */
 public abstract class PortaBinaria implements IngressoPortaUnaria {
     private PortaUnaria primoIngresso;
+
     private PortaUnaria secondoIngresso;
 
     public void aggiungiPrimoIngresso(PortaUnaria primaPortaUnaria) {
@@ -29,4 +30,5 @@ public abstract class PortaBinaria implements IngressoPortaUnaria {
     public boolean isStessoTipo(Carattere carattere) {
         return carattere instanceof PortaBinaria;
     }
+
 }

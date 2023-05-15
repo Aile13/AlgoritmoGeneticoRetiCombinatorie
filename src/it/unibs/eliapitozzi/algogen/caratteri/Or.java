@@ -12,7 +12,7 @@ public class Or extends PortaBinaria {
     }
 
     @Override
-    public void mutation() {
-
+    public Carattere mutation() {
+        return new And();
     }
 }

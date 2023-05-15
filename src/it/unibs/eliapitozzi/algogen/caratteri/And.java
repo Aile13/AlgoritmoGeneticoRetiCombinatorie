@@ -9,11 +9,10 @@ public class And extends PortaBinaria {
     @Override
     public boolean computaOutput(RigaTabella rigaTabella) {
         return super.computaOutputDiPrimoIngresso(rigaTabella) && super.computaOutputDiSecondoIngresso(rigaTabella);
-
     }
 
     @Override
-    public void mutation() {
-
+    public Carattere mutation() {
+        return new Or();
     }
 }

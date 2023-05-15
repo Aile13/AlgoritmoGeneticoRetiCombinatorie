@@ -13,7 +13,7 @@ public class Filo extends PortaUnaria {
     }
 
     @Override
-    public void mutation() {
-
+    public Carattere mutation() {
+        return new Not();
     }
 }

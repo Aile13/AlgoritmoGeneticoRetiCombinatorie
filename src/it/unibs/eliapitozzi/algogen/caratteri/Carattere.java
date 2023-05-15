@@ -10,5 +10,5 @@ public interface Carattere {
 
     boolean isStessoTipo(Carattere carattere);
 
-    void mutation();
+    Carattere mutation();
 }
