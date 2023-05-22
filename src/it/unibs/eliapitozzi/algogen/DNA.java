@@ -10,20 +10,19 @@ import java.util.List;
  * @author Elia
  */
 public class DNA {
-    public static final int NUMERO_INGRESSI = 8;
-
     private final List<Carattere> geni = new ArrayList<>();
+    private int numeroIngressi;
 
     public DNA() {
     }
 
-    public List<Carattere> getGeni() {
-        return geni;
+    public DNA(int numeroDiRicorsioni, int numeroIngressi) {
+        this.numeroIngressi = numeroIngressi;
+        inizializzaDNA(numeroDiRicorsioni);
     }
 
-
-    public DNA(int numeroDiRicorsioni) {
-        inizializzaDNA(numeroDiRicorsioni);
+    public List<Carattere> getGeni() {
+        return geni;
     }
 
     private void inizializzaDNA(int numeroDiRicorsioni) {
@@ -156,11 +155,10 @@ public class DNA {
     }
 
     private void ingresso() {
-        int numeroIngresso = NumeriCasuali.estraiIntero(0, NUMERO_INGRESSI - 1);
-        geni.add(new Ingresso(numeroIngresso));
+        int numeroIngresso = NumeriCasuali.estraiIntero(0, numeroIngressi - 1);
+        geni.add(new Ingresso(numeroIngresso, numeroIngressi));
     }
 
-    //TODO: 04/mag/2023 questa tecnicamente è l'ultima.
     public void mutation() {
         for (int i = 0; i < this.getGeni().size(); i++) {
             if (Math.random() < 0.01) {
@@ -169,7 +167,6 @@ public class DNA {
         }
     }
 
-    //TODO: 04/mag/2023 questa è l'operazione successiva. Dovremmo esserci.
     public CoppiaDiDNA crossover(DNA dnaPartner) {
         int numeroCaratteriCompatibili = 0;
         int dimensioneMinimaDNA = Math.min(this.getGeni().size(), dnaPartner.getGeni().size());

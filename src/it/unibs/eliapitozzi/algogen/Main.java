@@ -9,14 +9,14 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("Hello world!");
         TabellaDiVerita tabellaDiVerita = new TabellaDiVerita(
-                List.of(new RigaTabella(List.of(false, false, false, false, false, false, false, true), true),
-                        new RigaTabella(List.of(false, false, false, true, true, true, true, true), true),
-                        new RigaTabella(List.of(false, true, true, true, true, true, true, true), false),
-                        new RigaTabella(List.of(false, false, false, false, false, false, false, true), true),
-                        new RigaTabella(List.of(false, false, false, false, false, false, false, true), true),
-                        new RigaTabella(List.of(false, false, false, false, false, false, false, true), true),
-                        new RigaTabella(List.of(false, false, false, false, false, false, false, true), true),
-                        new RigaTabella(List.of(true, true, true, true, true, true, true, true), true)
+                List.of(new RigaTabella(List.of(false, false, false), false),
+                        new RigaTabella(List.of(false, false, true), true),
+                        new RigaTabella(List.of(false, true, false), true),
+                        new RigaTabella(List.of(false, true, true), false),
+                        new RigaTabella(List.of(true, false, false), true),
+                        new RigaTabella(List.of(true, false, true), false),
+                        new RigaTabella(List.of(true, true, false), false),
+                        new RigaTabella(List.of(true, true, true), true)
                         )
         );
         AlgoritmoGenetico.run(tabellaDiVerita);

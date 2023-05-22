@@ -8,8 +8,8 @@ import java.util.List;
  * @author Elia
  */
 public class Popolazione {
-    private static final int DIM_POPOLAZIONE = 4;
-    private static final int MAX_NUM_DI_RICORSIONI = 12;
+    // TODO: 22/mag/2023 capire perché popolazione deve essere in numero pari
+    private static final int DIM_POPOLAZIONE = 26;
     private final List<ReteCombinatoria> listaDiReti = new ArrayList<>();
 
     private Popolazione() {
@@ -17,11 +17,10 @@ public class Popolazione {
 
     public static Popolazione creaPopolazioneCasuale(TabellaDiVerita tabellaDiVerita) {
         var popolazione = new Popolazione();
-
-        // TODO: 18/mag/2023 parametrizza con num di ingressi e di righe in tab.
+        var massimoNumeroDiRicorsioni = tabellaDiVerita.getTotaleRighe()*(tabellaDiVerita.getNumeroIngressi() - 1) + tabellaDiVerita.getTotaleRighe() - 1;
 
         for (int i = 0; i < DIM_POPOLAZIONE; i++) {
-            popolazione.listaDiReti.add(new ReteCombinatoria(i % MAX_NUM_DI_RICORSIONI));
+            popolazione.listaDiReti.add(new ReteCombinatoria(i % massimoNumeroDiRicorsioni, tabellaDiVerita.getNumeroIngressi()));
         }
         return popolazione;
     }
@@ -47,8 +46,12 @@ public class Popolazione {
         return new CoppiaDiRetiCombinatorie(matingPool.get(0), matingPool.get(1));
     }
 
-    public boolean haStessaDimensioneDi(Popolazione generazioneDiConfronto) {
-        return listaDiReti.size() == generazioneDiConfronto.listaDiReti.size();
+    public boolean haStessaDimOPariSuccessivoDi(Popolazione generazioneDiConfronto) {
+        if (listaDiReti.size() == generazioneDiConfronto.listaDiReti.size())
+            return true;
+        else if (listaDiReti.size() == generazioneDiConfronto.listaDiReti.size() + 1)
+            return true;
+        else return false;
     }
 
     public void inserisciCoppiaDiIndividui(CoppiaDiRetiCombinatorie coppiaDiIndividuiDaInserire) {
@@ -56,8 +59,6 @@ public class Popolazione {
         this.listaDiReti.add(coppiaDiIndividuiDaInserire.getReteCombinatoria2());
     }
 
-    // TODO: 15/mag/2023 questo serve ora, dobbiamo mostrare info circa popolazione corrente,
-    // punteggio medio, puntenggio migliore etc...
     public void mostraInfo(int i, TabellaDiVerita tabellaDiVerita) {
         var migliorRete = this.listaDiReti.get(0);
         var totalRawFitness = 0.;
@@ -81,6 +82,7 @@ public class Popolazione {
         builder.append(String.format("   punteggio medio: %1.4f", average));
         builder.append(String.format("   miglior punteggio: %1.4f", migliorRete.rawFitness(tabellaDiVerita)));
         builder.append("   stringa: " + migliorRete.getDNAString());
+
         System.out.println(builder);
     }
 }

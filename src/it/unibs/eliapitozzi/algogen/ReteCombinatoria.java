@@ -16,15 +16,15 @@ public class ReteCombinatoria {
     private DNA dna;
     private PortaUnaria program;
 
-    public ReteCombinatoria(int numeroDiRicorsioni) {
-        this.dna = new DNA(numeroDiRicorsioni);
+    public ReteCombinatoria(int numeroDiRicorsioni, int numeroIngressi) {
+        this.dna = new DNA(numeroDiRicorsioni, numeroIngressi);
         assemblaRete();
     }
 
     public double rawFitness(TabellaDiVerita tabellaDiVerita) {
         int righeCorrette = 0;
 
-        for (RigaTabella rigaTabella : tabellaDiVerita.getRigheTabella()) {
+        for (RigaTabella rigaTabella : tabellaDiVerita.righeTabella()) {
             var output = program.computaOutput(rigaTabella);
 
             if (output == rigaTabella.getOutputAtteso())

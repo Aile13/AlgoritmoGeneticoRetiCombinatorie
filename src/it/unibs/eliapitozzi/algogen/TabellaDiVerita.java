@@ -5,18 +5,13 @@ import java.util.List;
 /**
  * @author Elia
  */
-public class TabellaDiVerita {
-    private final List<RigaTabella>  righeTabella;
-
-    public TabellaDiVerita(List<RigaTabella> righeTabella) {
-        this.righeTabella = righeTabella;
-    }
-
-    public List<RigaTabella> getRigheTabella() {
-        return righeTabella;
-    }
+public record TabellaDiVerita(List<RigaTabella> righeTabella) {
 
     public int getTotaleRighe() {
         return righeTabella.size();
+    }
+
+    public int getNumeroIngressi() {
+        return this.righeTabella.get(0).getNumeroIngressi();
     }
 }

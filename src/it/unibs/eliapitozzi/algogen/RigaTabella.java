@@ -19,6 +19,11 @@ public class RigaTabella {
     }
 
     public boolean getValoreIngressoByNumero(int numeroIngresso) {
-        return combinazioneDiInput.get(numeroIngresso);
+        return combinazioneDiInput.get((combinazioneDiInput.size() - 1) - numeroIngresso);
+    }
+
+    public int getNumeroIngressi() {
+
+        return this.combinazioneDiInput.size();
     }
 }

@@ -5,7 +5,7 @@ package it.unibs.eliapitozzi.algogen;
  */
 public class AlgoritmoGenetico {
 
-    private static final int NUMERO_ITERAZIONI = 120;
+    private static final int NUMERO_ITERAZIONI = 60;
 
     public static void run(TabellaDiVerita tabellaDiVerita) {
         Popolazione generazione = Popolazione.creaPopolazioneCasuale(tabellaDiVerita);
@@ -15,7 +15,7 @@ public class AlgoritmoGenetico {
 
             generazione.mostraInfo(i, tabellaDiVerita);
 
-            while (!nuovaGenerazione.haStessaDimensioneDi(generazione)) {
+            while (!nuovaGenerazione.haStessaDimOPariSuccessivoDi(generazione)) {
                 CoppiaDiRetiCombinatorie coppiaDiIndividui = generazione.selezionaCoppiaDiIndividui(tabellaDiVerita);
 
                 coppiaDiIndividui = coppiaDiIndividui.crossover();
