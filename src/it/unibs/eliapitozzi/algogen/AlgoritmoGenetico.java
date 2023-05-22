@@ -5,15 +5,15 @@ package it.unibs.eliapitozzi.algogen;
  */
 public class AlgoritmoGenetico {
 
-    private static final int NUMERO_ITERAZIONI = 60;
+    private static final int NUMERO_ITERAZIONI = 120;
 
     public static void run(TabellaDiVerita tabellaDiVerita) {
-        Popolazione generazione = Popolazione.creaPopolazioneCasuale();
+        Popolazione generazione = Popolazione.creaPopolazioneCasuale(tabellaDiVerita);
 
         for (int i = 0; i < NUMERO_ITERAZIONI; i++) {
             Popolazione nuovaGenerazione = Popolazione.creaPopolazioneVuota();
 
-            generazione.mostraInfo();
+            generazione.mostraInfo(i, tabellaDiVerita);
 
             while (!nuovaGenerazione.haStessaDimensioneDi(generazione)) {
                 CoppiaDiRetiCombinatorie coppiaDiIndividui = generazione.selezionaCoppiaDiIndividui(tabellaDiVerita);

@@ -6,7 +6,7 @@ import java.util.List;
  * @author Elia
  */
 public class TabellaDiVerita {
-    private List<RigaTabella>  righeTabella;
+    private final List<RigaTabella>  righeTabella;
 
     public TabellaDiVerita(List<RigaTabella> righeTabella) {
         this.righeTabella = righeTabella;

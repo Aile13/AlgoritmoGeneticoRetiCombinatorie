@@ -15,4 +15,9 @@ public class And extends PortaBinaria {
     public Carattere mutation() {
         return new Or();
     }
+
+    @Override
+    public String getEncoding() {
+        return "A";
+    }
 }

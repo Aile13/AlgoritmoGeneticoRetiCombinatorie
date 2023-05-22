@@ -30,4 +30,9 @@ public class Ingresso implements IngressoPortaUnaria {
         int numeroIngresso = NumeriCasuali.estraiIntero(0, NUMERO_INGRESSI - 1);
         return new Ingresso(numeroIngresso);
     }
+
+    @Override
+    public String getEncoding() {
+        return String.valueOf(numeroIngresso);
+    }
 }

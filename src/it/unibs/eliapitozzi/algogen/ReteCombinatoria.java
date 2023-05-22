@@ -12,6 +12,7 @@ import java.util.List;
  * @author Elia
  */
 public class ReteCombinatoria {
+    private static final int BASE = 2;
     private DNA dna;
     private PortaUnaria program;
 
@@ -20,10 +21,9 @@ public class ReteCombinatoria {
         assemblaRete();
     }
 
-    // TODO: 04/mag/2023 questa è la prox cosa da fare. a meno di piccole cose è fatta.  questa dovrebbe essere fatta.
     public double rawFitness(TabellaDiVerita tabellaDiVerita) {
-
         int righeCorrette = 0;
+
         for (RigaTabella rigaTabella : tabellaDiVerita.getRigheTabella()) {
             var output = program.computaOutput(rigaTabella);
 
@@ -31,7 +31,7 @@ public class ReteCombinatoria {
                 righeCorrette++;
         }
 
-        return Math.pow(2., (double) righeCorrette / tabellaDiVerita.getTotaleRighe());
+        return Math.pow(BASE, (double) righeCorrette / tabellaDiVerita.getTotaleRighe()) - 1;
     }
 
     private void assemblaRete() {
@@ -82,4 +82,7 @@ public class ReteCombinatoria {
         this.dna.mutation();
     }
 
+    public String getDNAString() {
+        return this.dna.getString();
+    }
 }

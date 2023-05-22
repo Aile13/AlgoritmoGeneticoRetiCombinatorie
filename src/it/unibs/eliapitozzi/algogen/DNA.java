@@ -190,4 +190,12 @@ public class DNA {
 
         return new CoppiaDiDNA(primoFiglio, secondoFiglio);
     }
+
+    public String getString() {
+        StringBuilder builder = new StringBuilder();
+        for (Carattere carattere : this.getGeni()) {
+            builder.append(carattere.getEncoding());
+        }
+        return builder.toString();
+    }
 }

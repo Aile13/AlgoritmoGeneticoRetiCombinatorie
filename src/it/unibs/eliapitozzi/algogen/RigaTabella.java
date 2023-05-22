@@ -6,8 +6,8 @@ import java.util.List;
  * @author Elia
  */
 public class RigaTabella {
-    private List<Boolean> combinazioneDiInput;
-    private Boolean output;
+    private final List<Boolean> combinazioneDiInput;
+    private final Boolean output;
 
     public RigaTabella(List<Boolean> combinazioneDiInput, Boolean output) {
         this.combinazioneDiInput = combinazioneDiInput;

@@ -15,4 +15,9 @@ public class Not extends PortaUnaria {
     public Carattere mutation() {
         return new Filo();
     }
+
+    @Override
+    public String getEncoding() {
+        return "N";
+    }
 }

@@ -11,4 +11,6 @@ public interface Carattere {
     boolean isStessoTipo(Carattere carattere);
 
     Carattere mutation();
+
+    String getEncoding();
 }

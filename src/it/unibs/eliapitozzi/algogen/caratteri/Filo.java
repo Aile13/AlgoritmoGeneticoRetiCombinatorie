@@ -16,4 +16,9 @@ public class Filo extends PortaUnaria {
     public Carattere mutation() {
         return new Not();
     }
+
+    @Override
+    public String getEncoding() {
+        return "F";
+    }
 }
