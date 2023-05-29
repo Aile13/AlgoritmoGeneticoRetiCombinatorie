@@ -7,7 +7,7 @@ import java.util.List;
  */
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+
         TabellaDiVerita tabellaDiVerita = new TabellaDiVerita(
                 List.of(new RigaTabella(List.of(false, false, false), false),
                         new RigaTabella(List.of(false, false, true), true),
