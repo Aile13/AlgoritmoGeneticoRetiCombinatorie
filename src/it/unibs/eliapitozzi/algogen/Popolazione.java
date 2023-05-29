@@ -52,6 +52,7 @@ public class Popolazione {
                 return new CoppiaDiRetiCombinatorie(matingPool.get(0), matingPool.get(i));
         }
 
+        // se non ne ho trovate distinte ne prendo due uguali
         return new CoppiaDiRetiCombinatorie(matingPool.get(0), matingPool.get(0));
     }
 
