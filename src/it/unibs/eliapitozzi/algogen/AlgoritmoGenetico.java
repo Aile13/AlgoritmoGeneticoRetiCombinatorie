@@ -19,7 +19,7 @@ public class AlgoritmoGenetico {
                 CoppiaDiRetiCombinatorie coppiaDiIndividui = generazione.selezionaCoppiaDiIndividui(tabellaDiVerita);
 
                 coppiaDiIndividui = coppiaDiIndividui.crossover();
-                coppiaDiIndividui = coppiaDiIndividui.mutation();
+                coppiaDiIndividui.mutation();
 
                 nuovaGenerazione.inserisciCoppiaDiIndividui(coppiaDiIndividui);
             }

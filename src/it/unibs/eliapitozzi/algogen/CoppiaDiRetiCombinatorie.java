@@ -9,9 +9,8 @@ public record CoppiaDiRetiCombinatorie(ReteCombinatoria reteCombinatoria1, ReteC
         return reteCombinatoria1.crossover(reteCombinatoria1);
     }
 
-    public CoppiaDiRetiCombinatorie mutation() {
+    public void mutation() {
         reteCombinatoria1.mutation();
         reteCombinatoria2.mutation();
-        return this;
     }
 }
