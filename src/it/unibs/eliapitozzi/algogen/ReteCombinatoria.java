@@ -12,9 +12,11 @@ import java.util.List;
  * @author Elia
  */
 public class ReteCombinatoria {
-    private static final int BASE = 2;
+    private static final int BASE = 3;
+    private static final double CROSSOVER_RATE = 0.75;
     private DNA dna;
     private PortaUnaria program;
+    private int righeCorrette;
 
     public ReteCombinatoria(int numeroDiRicorsioni, int numeroIngressi) {
         this.dna = new DNA(numeroDiRicorsioni, numeroIngressi);
@@ -22,7 +24,7 @@ public class ReteCombinatoria {
     }
 
     public double rawFitness(TabellaDiVerita tabellaDiVerita) {
-        int righeCorrette = 0;
+        righeCorrette = 0;
 
         for (RigaTabella rigaTabella : tabellaDiVerita.righeTabella()) {
             var output = program.computaOutput(rigaTabella);
@@ -31,7 +33,7 @@ public class ReteCombinatoria {
                 righeCorrette++;
         }
 
-        return Math.pow(BASE, (double) righeCorrette / tabellaDiVerita.getTotaleRighe()) - 1;
+        return (Math.pow(BASE, (double) righeCorrette / tabellaDiVerita.getTotaleRighe()) - 1 ) / (BASE - 1);
     }
 
     private void assemblaRete() {
@@ -69,7 +71,7 @@ public class ReteCombinatoria {
     }
 
     public CoppiaDiRetiCombinatorie crossover(ReteCombinatoria reteCombinatoriaPartner) {
-        if (Math.random() < 0.75) {
+        if (Math.random() < CROSSOVER_RATE) {
             CoppiaDiDNA crossover = this.dna.crossover(reteCombinatoriaPartner.dna);
             this.dna = crossover.getDna1();
             reteCombinatoriaPartner.dna = crossover.getDna2();
@@ -84,5 +86,9 @@ public class ReteCombinatoria {
 
     public String getDNAString() {
         return this.dna.getString();
+    }
+
+    public int getTotaleIngressiGiusti() {
+        return righeCorrette;
     }
 }

@@ -19,6 +19,14 @@ public class Main {
                         new RigaTabella(List.of(true, true, true), true)
                         )
         );
+
+        /*TabellaDiVerita tabellaDiVerita = new TabellaDiVerita(
+                List.of(new RigaTabella(List.of(false, false), false),
+                        new RigaTabella(List.of(false, true), true),
+                        new RigaTabella(List.of(true, false), true),
+                        new RigaTabella(List.of(true, true), false)
+                        )
+        );*/
         AlgoritmoGenetico.run(tabellaDiVerita);
     }
 }

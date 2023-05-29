@@ -10,6 +10,7 @@ import java.util.List;
  * @author Elia
  */
 public class DNA {
+    private static final double MUTATION_RATE = 0.01;
     private final List<Carattere> geni = new ArrayList<>();
     private int numeroIngressi;
 
@@ -128,7 +129,7 @@ public class DNA {
     }
 
     private void nomePortaBinaria() {
-        if (Math.random() < 0.5) {
+        if (Math.random() < 0.50) {
             geni.add(new And());
         } else {
             geni.add(new Or());
@@ -147,7 +148,7 @@ public class DNA {
     }
 
     private void nomePortaUnaria() {
-        if (Math.random() < 0.5) {
+        if (Math.random() < 0.50) {
             geni.add(new Filo());
         } else {
             geni.add(new Not());
@@ -161,7 +162,7 @@ public class DNA {
 
     public void mutation() {
         for (int i = 0; i < this.getGeni().size(); i++) {
-            if (Math.random() < 0.01) {
+            if (Math.random() < MUTATION_RATE) {
                 this.getGeni().set(i, this.getGeni().get(i).mutation());
             }
         }
@@ -195,4 +196,5 @@ public class DNA {
         }
         return builder.toString();
     }
+
 }

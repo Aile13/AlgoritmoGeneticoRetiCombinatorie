@@ -8,8 +8,7 @@ import java.util.List;
  * @author Elia
  */
 public class Popolazione {
-    // TODO: 22/mag/2023 capire perché popolazione deve essere in numero pari
-    private static final int DIM_POPOLAZIONE = 26;
+    private static final int DIM_POPOLAZIONE = 500;
     private final List<ReteCombinatoria> listaDiReti = new ArrayList<>();
 
     private Popolazione() {
@@ -22,6 +21,7 @@ public class Popolazione {
         for (int i = 0; i < DIM_POPOLAZIONE; i++) {
             popolazione.listaDiReti.add(new ReteCombinatoria(i % massimoNumeroDiRicorsioni, tabellaDiVerita.getNumeroIngressi()));
         }
+
         return popolazione;
     }
 
@@ -29,8 +29,7 @@ public class Popolazione {
         return new Popolazione();
     }
 
-    public CoppiaDiRetiCombinatorie
-    selezionaCoppiaDiIndividui(TabellaDiVerita tabellaDiVerita) {
+    public CoppiaDiRetiCombinatorie selezionaCoppiaDiIndividui(TabellaDiVerita tabellaDiVerita) {
         var matingPool = new ArrayList<ReteCombinatoria>();
 
         for (ReteCombinatoria reteCombinatoria : listaDiReti) {
@@ -39,11 +38,21 @@ public class Popolazione {
             for (int i = 0; i < n; i++) {
                 matingPool.add(reteCombinatoria);
             }
-            matingPool.add(reteCombinatoria); // almeno una volta comunque viene inserita.
         }
 
+        // se non è stato riempito si riempie con tutti e si sceglie a caso
+        if (matingPool.isEmpty())
+            matingPool.addAll(listaDiReti);
+
         Collections.shuffle(matingPool);
-        return new CoppiaDiRetiCombinatorie(matingPool.get(0), matingPool.get(1));
+
+        // prendo due reti distinte
+        for (int i = 1; i < matingPool.size(); i++) {
+            if (!matingPool.get(0).equals(matingPool.get(i)))
+                return new CoppiaDiRetiCombinatorie(matingPool.get(0), matingPool.get(i));
+        }
+
+        return new CoppiaDiRetiCombinatorie(matingPool.get(0), matingPool.get(0));
     }
 
     public boolean haStessaDimOPariSuccessivoDi(Popolazione generazioneDiConfronto) {
@@ -72,16 +81,15 @@ public class Popolazione {
 
             totalRawFitness += punteggioRete;
         }
-        var totalFitness = 0.;
-        for (ReteCombinatoria reteCombinatoria : listaDiReti) {
-            totalFitness += reteCombinatoria.rawFitness(tabellaDiVerita) / totalRawFitness;
-        }
-        var average = totalFitness / listaDiReti.size();
 
-        StringBuilder builder = new StringBuilder(String.format("num generazione: %3d", i));
-        builder.append(String.format("   punteggio medio: %1.4f", average));
-        builder.append(String.format("   miglior punteggio: %1.4f", migliorRete.rawFitness(tabellaDiVerita)));
-        builder.append("   stringa: " + migliorRete.getDNAString());
+        var average = totalRawFitness / listaDiReti.size();
+
+        StringBuilder builder = new StringBuilder(String.format("num gen: %3d", i))
+                .append(String.format("  punteggio medio: %1.4f", average))
+                .append(String.format("  miglior punteggio: %1.4f", migliorRete.rawFitness(tabellaDiVerita)))
+                .append("  tot ingressi: " + migliorRete.getTotaleIngressiGiusti() + "/" + tabellaDiVerita.getTotaleRighe())
+                .append("  stringa: ")
+                .append(migliorRete.getDNAString());
 
         System.out.println(builder);
     }

@@ -5,7 +5,7 @@ package it.unibs.eliapitozzi.algogen;
  */
 public class AlgoritmoGenetico {
 
-    private static final int NUMERO_ITERAZIONI = 60;
+    private static final int NUMERO_ITERAZIONI = 120;
 
     public static void run(TabellaDiVerita tabellaDiVerita) {
         Popolazione generazione = Popolazione.creaPopolazioneCasuale(tabellaDiVerita);
