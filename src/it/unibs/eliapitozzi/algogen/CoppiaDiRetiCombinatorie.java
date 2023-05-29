@@ -3,22 +3,7 @@ package it.unibs.eliapitozzi.algogen;
 /**
  * @author Elia
  */
-public class CoppiaDiRetiCombinatorie {
-    private final ReteCombinatoria reteCombinatoria1;
-    private final ReteCombinatoria reteCombinatoria2;
-
-    public CoppiaDiRetiCombinatorie(ReteCombinatoria reteCombinatoria1, ReteCombinatoria reteCombinatoria2) {
-        this.reteCombinatoria1 = reteCombinatoria1;
-        this.reteCombinatoria2 = reteCombinatoria2;
-    }
-
-    public ReteCombinatoria getReteCombinatoria1() {
-        return reteCombinatoria1;
-    }
-
-    public ReteCombinatoria getReteCombinatoria2() {
-        return reteCombinatoria2;
-    }
+public record CoppiaDiRetiCombinatorie(ReteCombinatoria reteCombinatoria1, ReteCombinatoria reteCombinatoria2) {
 
     public CoppiaDiRetiCombinatorie crossover() {
         return reteCombinatoria1.crossover(reteCombinatoria1);

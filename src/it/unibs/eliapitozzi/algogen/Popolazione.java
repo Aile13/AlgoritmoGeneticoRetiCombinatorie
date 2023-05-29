@@ -65,8 +65,8 @@ public class Popolazione {
     }
 
     public void inserisciCoppiaDiIndividui(CoppiaDiRetiCombinatorie coppiaDiIndividuiDaInserire) {
-        this.listaDiReti.add(coppiaDiIndividuiDaInserire.getReteCombinatoria1());
-        this.listaDiReti.add(coppiaDiIndividuiDaInserire.getReteCombinatoria2());
+        this.listaDiReti.add(coppiaDiIndividuiDaInserire.reteCombinatoria1());
+        this.listaDiReti.add(coppiaDiIndividuiDaInserire.reteCombinatoria2());
     }
 
     public void mostraInfo(int i, TabellaDiVerita tabellaDiVerita) {
