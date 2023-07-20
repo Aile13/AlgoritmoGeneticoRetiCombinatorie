@@ -37,7 +37,6 @@ public class MaxCliqueHeuristic implements MinimumColumnCoverHeuristic {
         }
       }
 
-//      TODO: Watch this.
       if (maxColumnIndex != -1) {
         columnCover.add(maxColumnIndex);
         columnChoiceCleanup(matrix, maxColumnIndex);

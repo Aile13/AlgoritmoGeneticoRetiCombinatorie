@@ -13,4 +13,6 @@ public interface Carattere {
     Carattere mutation();
 
     String getEncoding();
+
+    String getFunction();
 }

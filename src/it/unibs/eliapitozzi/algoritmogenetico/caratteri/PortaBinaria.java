@@ -18,6 +18,14 @@ public abstract class PortaBinaria implements IngressoPortaUnaria {
         secondoIngresso = secondaPortaUnaria;
     }
 
+    protected PortaUnaria getPrimoIngresso() {
+        return primoIngresso;
+    }
+
+    protected PortaUnaria getSecondoIngresso() {
+        return secondoIngresso;
+    }
+
     protected boolean computaOutputDiPrimoIngresso(RigaTabella rigaTabella) {
         return primoIngresso.computaOutput(rigaTabella);
     }

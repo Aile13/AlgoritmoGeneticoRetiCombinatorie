@@ -596,7 +596,6 @@ public class Cube {
     throw new UnsupportedOperationException("Likely first bug in Cube#inputDistance, outputDistance.");
   }
 
-//  TODO: contain, strictContain, notContain if needed.
 
   /**
    * Method tells whether this cube {@link Containment#CONTAIN} or {@link Containment#STRICT_CONTAIN}

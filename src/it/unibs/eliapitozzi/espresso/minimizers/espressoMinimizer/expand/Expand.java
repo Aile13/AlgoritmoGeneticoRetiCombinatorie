@@ -40,7 +40,7 @@ public final class Expand {
   }
 
   public static Pair<Cube, List<Integer>> singleOutputCubeExpand(Cube cube, Cover onSet, Cover offSet) {
-    clearStatic(); //TODO: Code smell.
+    clearStatic();
     SingleOutputBlockMatrix blockMatrix = new SingleOutputBlockMatrix(offSet, cube);
     SingleOutputCoverMatrix coverMatrix = new SingleOutputCoverMatrix(onSet, cube);
 

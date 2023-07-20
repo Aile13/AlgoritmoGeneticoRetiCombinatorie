@@ -20,7 +20,6 @@ final public class Complement {
    * Second cover defines inputs for which boolean function outputs either
    * true or false, doesn't matter.
    * <p>
-   * TODO: Needs to be tested.
    *
    * @param onSet       {@link Cover} for which the boolean function will output true
    * @param dontcareSet {@link Cover} for which the boolean function will output true/false

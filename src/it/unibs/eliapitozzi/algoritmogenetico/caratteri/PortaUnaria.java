@@ -7,8 +7,13 @@ import it.unibs.eliapitozzi.algoritmogenetico.RigaTabella;
  */
 public abstract class PortaUnaria implements IngressoPortaBinaria {
     private IngressoPortaUnaria ingresso;
+
     public void aggiungiIngresso(IngressoPortaUnaria ingresso) {
         this.ingresso = ingresso;
+    }
+
+    protected IngressoPortaUnaria getIngresso() {
+        return ingresso;
     }
 
     protected boolean computaOutputDiIngresso(RigaTabella rigaTabella) {

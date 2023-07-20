@@ -21,4 +21,9 @@ public class Filo extends PortaUnaria {
     public String getEncoding() {
         return "F";
     }
+
+    @Override
+    public String getFunction() {
+        return "( " + super.getIngresso().getFunction() + " )";
+    }
 }

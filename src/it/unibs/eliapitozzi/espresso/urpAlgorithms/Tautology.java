@@ -54,7 +54,6 @@ final public class Tautology {
     }
 
     if (cover.size() <= 7) {
-//      TODO: Truth table check.
       return null;
     }
 

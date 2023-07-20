@@ -22,8 +22,4 @@ public class RigaTabella {
         return combinazioneDiInput.get((combinazioneDiInput.size() - 1) - numeroIngresso);
     }
 
-    public int getNumeroIngressi() {
-
-        return this.combinazioneDiInput.size();
-    }
 }

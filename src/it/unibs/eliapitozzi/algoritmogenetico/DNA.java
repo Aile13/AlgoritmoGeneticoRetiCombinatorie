@@ -4,6 +4,7 @@ import it.unibs.eliapitozzi.algoritmogenetico.caratteri.*;
 import it.unibs.eliapitozzi.mylib.NumeriCasuali;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 /**
@@ -11,7 +12,7 @@ import java.util.List;
  */
 public class DNA {
     private static final double MUTATION_RATE = 0.01;
-    private final List<Carattere> geni = new ArrayList<>();
+    private final List<Carattere> geni = new LinkedList<>();
     private int numeroIngressi;
 
     public DNA() {

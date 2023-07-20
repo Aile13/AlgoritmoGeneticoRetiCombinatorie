@@ -91,4 +91,8 @@ public class ReteCombinatoria {
     public int getTotaleIngressiGiusti() {
         return righeCorrette;
     }
+
+    public String getFunction() {
+        return this.program.getFunction();
+    }
 }

@@ -35,4 +35,9 @@ public class Ingresso implements IngressoPortaUnaria {
     public String getEncoding() {
         return String.valueOf(numeroIngresso);
     }
+
+    @Override
+    public String getFunction() {
+        return String.valueOf((char)(numeroIngresso + 1 + 64));
+    }
 }

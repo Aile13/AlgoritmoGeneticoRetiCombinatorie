@@ -20,4 +20,11 @@ public class Or extends PortaBinaria {
     public String getEncoding() {
         return "O";
     }
+
+    @Override
+    public String getFunction() {
+        return "( " + super.getPrimoIngresso().getFunction() +
+                " | "
+                + super.getSecondoIngresso().getFunction() + " )";
+    }
 }

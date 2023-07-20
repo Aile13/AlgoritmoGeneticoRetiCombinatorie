@@ -178,7 +178,6 @@ public class BooleanMatrix implements Iterable<List<Boolean>> {
     return getColumnCount() - getTrueColumnCount(rowIndex);
   }
 
-//  TODO: getFalseRowCount(int rowIndex, boolean countIgnoredValues){}
 
   public boolean getElement(int i, int j) {
     return matrix.get(i).get(j);

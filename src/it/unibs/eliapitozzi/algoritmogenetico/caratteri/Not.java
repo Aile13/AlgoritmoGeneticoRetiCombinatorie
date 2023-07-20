@@ -20,4 +20,9 @@ public class Not extends PortaUnaria {
     public String getEncoding() {
         return "N";
     }
+
+    @Override
+    public String getFunction() {
+        return "( !" + super.getIngresso().getFunction() + " )";
+    }
 }

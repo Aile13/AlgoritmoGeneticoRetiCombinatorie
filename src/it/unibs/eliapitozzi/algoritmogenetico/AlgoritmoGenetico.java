@@ -5,9 +5,9 @@ package it.unibs.eliapitozzi.algoritmogenetico;
  */
 public class AlgoritmoGenetico {
 
-    private static final int NUMERO_ITERAZIONI = 120;
+    private static final int NUMERO_ITERAZIONI = 50;
 
-    public static void run(TabellaDiVerita tabellaDiVerita) {
+    public static String run(TabellaDiVerita tabellaDiVerita) {
         Popolazione generazione = Popolazione.creaPopolazioneCasuale(tabellaDiVerita);
 
         for (int i = 0; i < NUMERO_ITERAZIONI; i++) {
@@ -27,5 +27,7 @@ public class AlgoritmoGenetico {
             generazione = nuovaGenerazione;
         }
 
+        ReteCombinatoria miglioreIndividuo = generazione.getMiglioreIndividuo(tabellaDiVerita);
+        return miglioreIndividuo.getFunction();
     }
 }

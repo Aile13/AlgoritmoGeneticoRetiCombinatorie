@@ -20,4 +20,10 @@ public class And extends PortaBinaria {
     public String getEncoding() {
         return "A";
     }
+
+    @Override
+    public String getFunction() {
+        return "( " + super.getPrimoIngresso().getFunction() + " & "
+                + super.getSecondoIngresso().getFunction() + " )";
+    }
 }

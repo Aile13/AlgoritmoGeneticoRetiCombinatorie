@@ -94,4 +94,13 @@ public class Popolazione {
 
         System.out.println(builder);
     }
+
+    public ReteCombinatoria getMiglioreIndividuo(TabellaDiVerita tabellaDiVerita) {
+        var migliorRete = listaDiReti.get(0);
+        for (ReteCombinatoria reteCombinatoria : listaDiReti) {
+            if (reteCombinatoria.rawFitness(tabellaDiVerita) > migliorRete.rawFitness(tabellaDiVerita))
+                migliorRete = reteCombinatoria;
+        }
+        return migliorRete;
+    }
 }
