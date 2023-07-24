@@ -5,10 +5,7 @@ import it.unibs.eliapitozzi.espresso.boolFunction.InputState;
 import it.unibs.eliapitozzi.espresso.boolFunction.OutputState;
 import it.unibs.eliapitozzi.espresso.boolFunction.cube.Cube;
 
-import java.util.Arrays;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Objects;
+import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -26,6 +23,27 @@ public final class TabellaDiVerita {
             boolean output = Math.random() < 0.5;
             righeTabella.add(new RigaTabella(getListBoolByNum(i, numeroDiIngressi), output));
         }
+    }
+
+    private TabellaDiVerita() {
+        numeroDiIngressi = 2;
+        righeTabella.add(new RigaTabella(List.of(false, false), false));
+        righeTabella.add(new RigaTabella(List.of(false, true), true));
+        righeTabella.add(new RigaTabella(List.of(true, false), false));
+        righeTabella.add(new RigaTabella(List.of(true, true), false));
+        /*numeroDiIngressi = 3;
+        righeTabella.add(new RigaTabella( List.of(false, false, false), false));
+        righeTabella.add(new RigaTabella( List.of(false, false, true), true));
+        righeTabella.add(new RigaTabella( List.of(false, true, false), true));
+        righeTabella.add(new RigaTabella( List.of(false, true, true), false));
+        righeTabella.add(new RigaTabella( List.of(true, false, false), true));
+        righeTabella.add(new RigaTabella( List.of(true, false, true), false));
+        righeTabella.add(new RigaTabella( List.of(true, true, false), false));
+        righeTabella.add(new RigaTabella( List.of(true, true, true), true));*/
+    }
+
+    public static TabellaDiVerita getSumTable() {
+        return new TabellaDiVerita();
     }
 
     private List<Boolean> getListBoolByNum(int numero, int numeroDiIngressi) {
@@ -74,7 +92,7 @@ public final class TabellaDiVerita {
         int indiceVariabile = numeroDiIngressi - 1;
 
         for (int i = 0; i < variabili.length; i++) {
-            variabili[i] = String.valueOf((char)(indiceVariabile + 1 + 64));;
+            variabili[i] = String.valueOf((char) (indiceVariabile + 1 + 64));
             indiceVariabile--;
         }
         return variabili;
@@ -113,5 +131,28 @@ public final class TabellaDiVerita {
             }
         }
         return cover;
+    }
+
+    public String getSumOfProducts() {
+        List<String> products = new LinkedList<>();
+
+        for (RigaTabella rigaTabella : righeTabella) {
+
+            int indiceVariabile = numeroDiIngressi - 1;
+            if (rigaTabella.getOutputAtteso()) {
+                List<String> terms = new LinkedList<>();
+                for (int i = 0; i < numeroDiIngressi; i++) {
+                    String variabile = String.valueOf((char) (indiceVariabile + 1 + 64));
+                    if (rigaTabella.getValoreIngressoByNumero(indiceVariabile)) {
+                        terms.add(variabile);
+                    } else terms.add("!" + variabile);
+
+                    indiceVariabile--;
+                }
+
+                products.add("( " + String.join(" & ", terms) + " )");
+            }
+        }
+        return String.join(" | ", products);
     }
 }

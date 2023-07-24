@@ -13,21 +13,22 @@ public class EspressoParseFunction {
     public static String parseFunction(Cover minimized, TabellaDiVerita tabellaDiVerita) {
         List<String> stringList;
         List<String> products = new LinkedList<>();
-        int i = tabellaDiVerita.getNumeroIngressi() - 1;
 
         for (Cube cube : minimized) {
-             stringList = new LinkedList<>();
+            int indice = 0;
+
+            stringList = new LinkedList<>();
             for (InputState inputState : cube.getInputState()) {
+                String variabile = String.valueOf((char) (indice + 1 + 64));
+
                 if (inputState.equals(InputState.ONE)) {
-                    stringList.add("x" + i);
-                } else stringList.add("!x" + i);
-                i--;
+                    stringList.add(variabile);
+                } else stringList.add("!" + variabile);
+                indice++;
             }
             String product = String.join(" & ", stringList);
             product = "(" + product + ")";
             products.add(product);
-
-            i = tabellaDiVerita.getNumeroIngressi() - 1;
         }
 
         return String.join(" | ", products);

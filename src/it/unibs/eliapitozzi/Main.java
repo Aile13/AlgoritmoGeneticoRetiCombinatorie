@@ -2,24 +2,14 @@ package it.unibs.eliapitozzi;
 
 import com.bpodgursky.jbool_expressions.Expression;
 import com.bpodgursky.jbool_expressions.parsers.ExprParser;
+import com.bpodgursky.jbool_expressions.rules.Rule;
 import com.bpodgursky.jbool_expressions.rules.RuleSet;
 import it.unibs.eliapitozzi.algoritmogenetico.AlgoritmoGenetico;
-import it.unibs.eliapitozzi.algoritmogenetico.RigaTabella;
 import it.unibs.eliapitozzi.algoritmogenetico.TabellaDiVerita;
-import it.unibs.eliapitozzi.espresso.boolFunction.Cover;
 import it.unibs.eliapitozzi.espresso.boolFunction.EspressoParseFunction;
-import it.unibs.eliapitozzi.espresso.boolFunction.InputState;
-import it.unibs.eliapitozzi.espresso.boolFunction.OutputState;
-import it.unibs.eliapitozzi.espresso.boolFunction.cube.Cube;
-import it.unibs.eliapitozzi.espresso.boolFunction.cube.CubeArray;
 import it.unibs.eliapitozzi.espresso.minimizers.espressoMinimizer.SingleOutputEspressoMinimizer;
 import it.unibs.eliapitozzi.quinemccluskey.QuineMcCluskey;
 import it.unibs.eliapitozzi.quinemccluskey.QuineMcCluskeyParseFunction;
-
-import java.util.List;
-
-import static it.unibs.eliapitozzi.espresso.boolFunction.InputState.*;
-import static it.unibs.eliapitozzi.espresso.boolFunction.OutputState.OUTPUT;
 
 /**
  * @author Elia
@@ -27,37 +17,38 @@ import static it.unibs.eliapitozzi.espresso.boolFunction.OutputState.OUTPUT;
 public class Main {
     public static void main(String[] args) {
 
-        TabellaDiVerita tabellaDiVerita = new TabellaDiVerita(3);
+        TabellaDiVerita tabellaDiVerita = TabellaDiVerita.getSumTable();
+        // new TabellaDiVerita(2);
 
-        String function = AlgoritmoGenetico.run(tabellaDiVerita);
-        System.out.println(function);
+   /*     String function = AlgoritmoGenetico.run(tabellaDiVerita);
+        System.out.println("Funzione dell'algoritmo genetico: " + function);
+        esaminaFunzione(function, tabellaDiVerita);*/
 
-        Expression<String> sopForm1 = RuleSet.toDNF(ExprParser.parse(function));
-        System.out.println(sopForm1);
 
-       /* QuineMcCluskey quineMcCluskey = new QuineMcCluskey(tabellaDiVerita.getVariabili(), tabellaDiVerita.getPosizioni());
+        QuineMcCluskey quineMcCluskey = new QuineMcCluskey(tabellaDiVerita.getVariabili(), tabellaDiVerita.getPosizioni());
         String function2 = QuineMcCluskeyParseFunction.parseFunction(quineMcCluskey.getFunction());
-        System.out.println(function2);
-        Expression<String> sopForm2 = RuleSet.toDNF(ExprParser.parse(function2));
-        System.out.println(sopForm2);*/
+        System.out.println("Funzione di Quine-McCluskey: " + function2);
+        esaminaFunzione(function2, tabellaDiVerita);
 
-
-        /*Cube cube1 = new Cube(new InputState[]{ ZERO, ZERO, ONE}, new OutputState[]{OUTPUT});
-        Cube cube2 = new Cube(new InputState[]{ ZERO, ONE, ZERO}, new OutputState[]{OUTPUT});
-        Cube cube3 = new Cube(new InputState[]{ ONE, ZERO, ZERO}, new OutputState[]{OUTPUT});
-        Cube cube4 = new Cube(new InputState[]{ONE, ONE, ONE}, new OutputState[]{OUTPUT});
-
-        Cover cover = new Cover(cube1, cube2, cube3, cube4);*/
-
-/*        String function3 = EspressoParseFunction
+        String function3 = EspressoParseFunction
                 .parseFunction(
                         SingleOutputEspressoMinimizer.getInstance().minimize(tabellaDiVerita.getCover()),
                         tabellaDiVerita
                 );
-        System.out.println(function3);
-        Expression<String> sopForm3 = RuleSet.toDNF(ExprParser.parse(function3));
-        System.out.println(sopForm3);*/
+        System.out.println( SingleOutputEspressoMinimizer.getInstance().minimize(tabellaDiVerita.getCover()));
+        System.out.println("Funzione di Espresso: " + function3);
+        esaminaFunzione(function3, tabellaDiVerita);
 
+    }
+
+    private static void esaminaFunzione(String function, TabellaDiVerita tabellaDiVerita) {
+        Expression<String> sopForm = RuleSet.toDNF(ExprParser.parse(function));
+        System.out.println("Funzione in forma canonica: " + sopForm);
+        var tabDiVeritaFunciton = ExprParser.parse(tabellaDiVerita.getSumOfProducts());
+        System.out.println("Tabella di verità: " + tabDiVeritaFunciton);
+        if (sopForm.equals(tabDiVeritaFunciton)) {
+            System.out.println("La funzione è valida.");
+        } else System.out.println("La funzione non è valida.");
     }
 
 }
