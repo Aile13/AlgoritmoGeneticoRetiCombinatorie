@@ -15,7 +15,7 @@ import it.unibs.eliapitozzi.quinemccluskey.QuineMcCluskeyParseFunction;
 public class Main {
     public static void main(String[] args) {
 
-        TabellaDiVerita tabellaDiVerita = new TabellaDiVerita(3);
+        TabellaDiVerita tabellaDiVerita = TabellaDiVerita.getSumTable();
 
    /*     String function = AlgoritmoGenetico.run(tabellaDiVerita);
         System.out.println("Funzione dell'algoritmo genetico: " + function);
@@ -37,10 +37,11 @@ public class Main {
 
     }
 
+
     private static void esaminaFunzione(String function, TabellaDiVerita tabellaDiVerita) {
-        Expression<String> posForm = RuleSet.toPos(ExprParser.parse(function));
+        Expression<String> posForm = RuleSet.toSop(ExprParser.parse(function));
         System.out.println("Funzione in forma canonica: " + posForm);
-        var tabDiVeritaFunciton = RuleSet.toPos(ExprParser.parse(tabellaDiVerita.getSumOfProducts()));
+        var tabDiVeritaFunciton = RuleSet.toSop(ExprParser.parse(tabellaDiVerita.getSumOfProducts()));
         System.out.println("Tabella di verità: " + tabDiVeritaFunciton);
         if (posForm.equals(tabDiVeritaFunciton)) {
             System.out.println("La funzione è valida.");
