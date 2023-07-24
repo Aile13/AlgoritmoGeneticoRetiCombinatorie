@@ -23,18 +23,19 @@ public final class TabellaDiVerita {
             boolean output = Math.random() < 0.5;
             righeTabella.add(new RigaTabella(getListBoolByNum(i, numeroDiIngressi), output));
         }
+        System.out.println(numeroRigheConUscitaAuno());
     }
 
     private TabellaDiVerita() {
-       /* numeroDiIngressi = 2;
+        /*numeroDiIngressi = 2;
         righeTabella.add(new RigaTabella(List.of(false, false), false));
-        righeTabella.add(new RigaTabella(List.of(false, true), true));
+        righeTabella.add(new RigaTabella(List.of(false, true), false));
         righeTabella.add(new RigaTabella(List.of(true, false), true));
-        righeTabella.add(new RigaTabella(List.of(true, true), false));*/
+        righeTabella.add(new RigaTabella(List.of(true, true), true));*/
         numeroDiIngressi = 3;
         righeTabella.add(new RigaTabella( List.of(false, false, false), true));
         righeTabella.add(new RigaTabella( List.of(false, false, true), true));
-        righeTabella.add(new RigaTabella( List.of(false, true, false), false));
+        righeTabella.add(new RigaTabella( List.of(false, true, false), true));
         righeTabella.add(new RigaTabella( List.of(false, true, true), false));
         righeTabella.add(new RigaTabella( List.of(true, false, false), true));
         righeTabella.add(new RigaTabella( List.of(true, false, true), false));
@@ -134,14 +135,14 @@ public final class TabellaDiVerita {
         return cover;
     }
 
-   /* private int numeroRigheConUscitaAuno() {
+    private int numeroRigheConUscitaAuno() {
         int numero = 0;
         for (RigaTabella rigaTabella : righeTabella) {
             if (rigaTabella.getOutputAtteso())
                 numero++;
         }
         return numero;
-    }*/
+    }
 
     public String getSumOfProducts() {
         List<String> products = new LinkedList<>();
@@ -155,7 +156,7 @@ public final class TabellaDiVerita {
                     String variabile = String.valueOf((char) (indiceVariabile + 1 + 64));
                     if (rigaTabella.getValoreIngressoByNumero(indiceVariabile)) {
                         terms.add(variabile);
-                    } else terms.add("!" + variabile);
+                    } else terms.add("~" + variabile);
 
                     indiceVariabile--;
                 }

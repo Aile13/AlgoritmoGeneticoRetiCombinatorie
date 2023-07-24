@@ -5,8 +5,9 @@ package it.unibs.eliapitozzi.quinemccluskey;
  */
 public class QuineMcCluskeyParseFunction {
     public static String parseFunction(String function) {
-        return function.replace("NOT", "!")
+        function = function.replace("NOT ", "~")
                 .replace("AND", "&")
                 .replace("OR", "|");
+        return "(" + function + ")";
     }
 }

@@ -16,7 +16,7 @@ public class EspressoParseFunction {
 
         System.out.println(minimized);
         for (Cube cube : minimized) {
-            int indice = tabellaDiVerita.getNumeroIngressi() - 1;
+            int indice = 0;
 
             stringList = new LinkedList<>();
             for (InputState inputState : cube.getInputState()) {
@@ -25,9 +25,9 @@ public class EspressoParseFunction {
                 if (inputState.equals(InputState.ONE)) {
                     stringList.add(variabile);
                 } else if (inputState.equals(InputState.ZERO)) {
-                    stringList.add("!" + variabile);
+                    stringList.add("~" + variabile);
                 }
-                indice--;
+                indice++;
             }
             String product = String.join(" & ", stringList);
             product = "(" + product + ")";
