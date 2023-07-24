@@ -29,7 +29,7 @@ public final class TabellaDiVerita {
         numeroDiIngressi = 2;
         righeTabella.add(new RigaTabella(List.of(false, false), false));
         righeTabella.add(new RigaTabella(List.of(false, true), true));
-        righeTabella.add(new RigaTabella(List.of(true, false), false));
+        righeTabella.add(new RigaTabella(List.of(true, false), true));
         righeTabella.add(new RigaTabella(List.of(true, true), false));
         /*numeroDiIngressi = 3;
         righeTabella.add(new RigaTabella( List.of(false, false, false), false));
@@ -111,6 +111,7 @@ public final class TabellaDiVerita {
         for (int j = 0; j < righeTabella.size(); j++) {
             if (righeTabella.get(j).getOutputAtteso()) {
                 posizioni[i] = j;
+                i++;
             }
         }
 

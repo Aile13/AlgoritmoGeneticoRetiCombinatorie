@@ -35,7 +35,6 @@ public class Main {
                         SingleOutputEspressoMinimizer.getInstance().minimize(tabellaDiVerita.getCover()),
                         tabellaDiVerita
                 );
-        System.out.println( SingleOutputEspressoMinimizer.getInstance().minimize(tabellaDiVerita.getCover()));
         System.out.println("Funzione di Espresso: " + function3);
         esaminaFunzione(function3, tabellaDiVerita);
 
