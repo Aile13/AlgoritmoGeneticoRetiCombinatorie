@@ -23,7 +23,9 @@ public class EspressoParseFunction {
 
                 if (inputState.equals(InputState.ONE)) {
                     stringList.add(variabile);
-                } else stringList.add("!" + variabile);
+                } else if (inputState.equals(InputState.ZERO)) {
+                    stringList.add("!" + variabile);
+                }
                 indice++;
             }
             String product = String.join(" & ", stringList);

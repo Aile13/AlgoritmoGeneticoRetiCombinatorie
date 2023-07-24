@@ -26,20 +26,20 @@ public final class TabellaDiVerita {
     }
 
     private TabellaDiVerita() {
-        numeroDiIngressi = 2;
+       /* numeroDiIngressi = 2;
         righeTabella.add(new RigaTabella(List.of(false, false), false));
         righeTabella.add(new RigaTabella(List.of(false, true), true));
         righeTabella.add(new RigaTabella(List.of(true, false), true));
-        righeTabella.add(new RigaTabella(List.of(true, true), false));
-        /*numeroDiIngressi = 3;
-        righeTabella.add(new RigaTabella( List.of(false, false, false), false));
+        righeTabella.add(new RigaTabella(List.of(true, true), false));*/
+        numeroDiIngressi = 3;
+        righeTabella.add(new RigaTabella( List.of(false, false, false), true));
         righeTabella.add(new RigaTabella( List.of(false, false, true), true));
-        righeTabella.add(new RigaTabella( List.of(false, true, false), true));
+        righeTabella.add(new RigaTabella( List.of(false, true, false), false));
         righeTabella.add(new RigaTabella( List.of(false, true, true), false));
         righeTabella.add(new RigaTabella( List.of(true, false, false), true));
         righeTabella.add(new RigaTabella( List.of(true, false, true), false));
         righeTabella.add(new RigaTabella( List.of(true, true, false), false));
-        righeTabella.add(new RigaTabella( List.of(true, true, true), true));*/
+        righeTabella.add(new RigaTabella( List.of(true, true, true), false));
     }
 
     public static TabellaDiVerita getSumTable() {
@@ -133,6 +133,15 @@ public final class TabellaDiVerita {
         }
         return cover;
     }
+
+   /* private int numeroRigheConUscitaAuno() {
+        int numero = 0;
+        for (RigaTabella rigaTabella : righeTabella) {
+            if (rigaTabella.getOutputAtteso())
+                numero++;
+        }
+        return numero;
+    }*/
 
     public String getSumOfProducts() {
         List<String> products = new LinkedList<>();
