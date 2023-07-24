@@ -14,7 +14,6 @@ public class EspressoParseFunction {
         List<String> stringList;
         List<String> products = new LinkedList<>();
 
-        System.out.println(minimized);
         for (Cube cube : minimized) {
             int indice = 0;
 

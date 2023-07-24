@@ -23,7 +23,6 @@ public final class TabellaDiVerita {
             boolean output = Math.random() < 0.5;
             righeTabella.add(new RigaTabella(getListBoolByNum(i, numeroDiIngressi), output));
         }
-        System.out.println(numeroRigheConUscitaAuno());
     }
 
     private TabellaDiVerita() {
