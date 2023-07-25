@@ -9,5 +9,6 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="MyLib" level="project" />
     <orderEntry type="library" name="logicng" level="project" />
+    <orderEntry type="library" name="apache.commons.lang3" level="project" />
   </component>
 </module>
