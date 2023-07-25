@@ -1,13 +1,9 @@
 package it.unibs.eliapitozzi.algoritmogenetico;
 
-import it.unibs.eliapitozzi.espresso.boolFunction.Cover;
-import it.unibs.eliapitozzi.espresso.boolFunction.InputState;
-import it.unibs.eliapitozzi.espresso.boolFunction.OutputState;
-import it.unibs.eliapitozzi.espresso.boolFunction.cube.Cube;
-
-import java.util.*;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Objects;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 /**
  * @author Elia
@@ -118,7 +114,7 @@ public final class TabellaDiVerita {
         return posizioni;
     }
 
-    public Cover getCover() {
+    /*public Cover getCover() {
         Cover cover = new Cover(numeroDiIngressi, 1);
         for (RigaTabella rigaTabella : righeTabella) {
             var inputState = new InputState[numeroDiIngressi];
@@ -132,7 +128,7 @@ public final class TabellaDiVerita {
             }
         }
         return cover;
-    }
+    }*/
 
     private int numeroRigheConUscitaAuno() {
         int numero = 0;

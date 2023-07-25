@@ -23,6 +23,6 @@ public class Not extends PortaUnaria {
 
     @Override
     public String getFunction() {
-        return "( !" + super.getIngresso().getFunction() + " )";
+        return "( ~" + super.getIngresso().getFunction() + " )";
     }
 }
