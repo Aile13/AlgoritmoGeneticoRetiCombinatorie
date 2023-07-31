@@ -17,8 +17,8 @@ import org.logicng.transformations.simplification.AdvancedSimplifier;
 public class Main {
     public static void main(String[] args) throws ParserException {
 
-        for (int i = 2; i < 28; i++) {
-            System.out.println("\tFunzione con " + i + " variabili di input");
+        for (int i = 2; i < 27; i++) {
+            System.out.println("\tFunzione con " + i + " variabili di input:");
 
             TabellaDiVerita tabellaDiVerita = new TabellaDiVerita(i);
             StopWatch watch = StopWatch.create();
@@ -26,17 +26,19 @@ public class Main {
             watch.start();
             String function1 = AlgoritmoGenetico.run(tabellaDiVerita);
             watch.stop();
-            System.out.println("Algoritmo genetico: " + watch.getTime());
+            System.out.println("Algoritmo genetico: " + watch);
             esaminaFunzione(function1, tabellaDiVerita);
 
-            watch.reset(); watch.start();
-            QuineMcCluskey quineMcCluskey = new QuineMcCluskey(tabellaDiVerita.getVariabili(), tabellaDiVerita.getPosizioni());
-            String function2 = quineMcCluskey.getFunction();
-            watch.stop();
-            System.out.println("Algoritmo Quine-McCluskey: " + watch.getTime());
-            function2 = QuineMcCluskeyParseFunction.parseFunction(function2);
-            esaminaFunzione(function2, tabellaDiVerita);
-
+            if (i <= 5) {
+                watch.reset();
+                watch.start();
+                QuineMcCluskey quineMcCluskey = new QuineMcCluskey(tabellaDiVerita.getVariabili(), tabellaDiVerita.getPosizioni());
+                String function2 = quineMcCluskey.getFunction();
+                watch.stop();
+                System.out.println("Algoritmo Quine-McCluskey: " + watch);
+                function2 = QuineMcCluskeyParseFunction.parseFunction(function2);
+                esaminaFunzione(function2, tabellaDiVerita);
+            }
 
 
             AdvancedSimplifier advancedSimplifier = new AdvancedSimplifier();
@@ -44,11 +46,12 @@ public class Main {
             FormulaFactory f = new FormulaFactory();
             PropositionalParser p = new PropositionalParser(f);
 
-            watch.reset(); watch.start();
+            watch.reset();
+            watch.start();
             Formula formulaTabellaDiVerita = p.parse(tabellaDiVerita.getSumOfProducts());
             Formula applied = advancedSimplifier.apply(formulaTabellaDiVerita, true);
             watch.stop();
-            System.out.println("Advanced Simplifier by LogicNG: " + watch.getTime());
+            System.out.println("Advanced Simplifier by LogicNG: " + watch);
             String function3 = applied.toString();
             esaminaFunzione(function3, tabellaDiVerita);
         }

@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="logicng" type="repository">
+    <properties maven-id="org.logicng:logicng:2.4.1" />
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/logicng/logicng/2.4.1/logicng-2.4.1.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/antlr/antlr4-runtime/4.9.3/antlr4-runtime-4.9.3.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
