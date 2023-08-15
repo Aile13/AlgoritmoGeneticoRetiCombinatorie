@@ -41,6 +41,136 @@ Algoritmo genetico: 00:24:40.710
 La funzione non è valida.
 Advanced Simplifier by LogicNG: 00:00:21.490
 La funzione è valida.
-	Funzione con 9 variabili di input:
-Algoritmo genetico: 00:31:04.315
+------------   Fine esecuzione di un test --------------
+	Funzione con 2 variabili di input:
+Algoritmo genetico: 00:00:17.652
+La funzione è valida.
+Algoritmo Quine-McCluskey: 00:00:00.005
+La funzione è valida.
+Advanced Simplifier by LogicNG: 00:00:00.067
+La funzione è valida.
+	Funzione con 3 variabili di input:
+Algoritmo genetico: 00:00:18.620
 La funzione non è valida.
+Algoritmo Quine-McCluskey: 00:00:00.004
+La funzione è valida.
+Advanced Simplifier by LogicNG: 00:00:00.024
+La funzione è valida.
+	Funzione con 4 variabili di input:
+Algoritmo genetico: 00:00:27.685
+La funzione non è valida.
+Algoritmo Quine-McCluskey: 00:00:00.000
+La funzione è valida.
+Advanced Simplifier by LogicNG: 00:00:00.035
+La funzione è valida.
+	Funzione con 5 variabili di input:
+Algoritmo genetico: 00:01:43.433
+La funzione non è valida.
+Algoritmo Quine-McCluskey: 00:00:00.006
+La funzione è valida.
+Advanced Simplifier by LogicNG: 00:00:00.091
+La funzione è valida.
+	Funzione con 6 variabili di input:
+Algoritmo genetico: 00:04:46.032
+La funzione non è valida.
+Advanced Simplifier by LogicNG: 00:00:00.160
+La funzione è valida.
+	Funzione con 7 variabili di input:
+Algoritmo genetico: 00:11:15.722
+La funzione non è valida.
+Advanced Simplifier by LogicNG: 00:00:00.556
+La funzione è valida.
+	Funzione con 8 variabili di input:
+Algoritmo genetico: 00:32:23.648
+La funzione non è valida.
+Advanced Simplifier by LogicNG: 03:58:50.220
+La funzione è valida.
+------------   Fine esecuzione di un test --------------
+	Funzione con 2 variabili di input:
+Algoritmo genetico: 00:00:17.476
+La funzione è valida.
+Algoritmo Quine-McCluskey: 00:00:00.000
+La funzione è valida.
+Advanced Simplifier by LogicNG: 00:00:00.005
+La funzione è valida.
+	Funzione con 3 variabili di input:
+Algoritmo genetico: 00:00:16.596
+La funzione non è valida.
+Algoritmo Quine-McCluskey: 00:00:00.000
+La funzione è valida.
+Advanced Simplifier by LogicNG: 00:00:00.004
+La funzione è valida.
+	Funzione con 4 variabili di input:
+Algoritmo genetico: 00:00:35.280
+La funzione non è valida.
+Algoritmo Quine-McCluskey: 00:00:00.000
+La funzione è valida.
+Advanced Simplifier by LogicNG: 00:00:00.009
+La funzione è valida.
+	Funzione con 5 variabili di input:
+Algoritmo genetico: 00:01:42.830
+La funzione non è valida.
+Algoritmo Quine-McCluskey: 00:00:00.007
+La funzione è valida.
+Advanced Simplifier by LogicNG: 00:00:00.027
+La funzione è valida.
+	Funzione con 6 variabili di input:
+Algoritmo genetico: 00:04:22.551
+La funzione non è valida.
+Advanced Simplifier by LogicNG: 00:00:00.030
+La funzione è valida.
+	Funzione con 7 variabili di input:
+Algoritmo genetico: 00:15:59.733
+La funzione non è valida.
+Advanced Simplifier by LogicNG: 00:00:01.216
+La funzione è valida.
+	Funzione con 8 variabili di input:
+Algoritmo genetico: 00:22:23.222
+La funzione non è valida.
+Advanced Simplifier by LogicNG: 01:41:52.067
+La funzione è valida.
+------------   Fine esecuzione di un test --------------
+	Funzione con 2 variabili di input:
+Algoritmo genetico: 00:00:23.731
+La funzione è valida.
+Algoritmo Quine-McCluskey: 00:00:00.004
+La funzione è valida.
+Advanced Simplifier by LogicNG: 00:00:00.041
+La funzione è valida.
+	Funzione con 3 variabili di input:
+Algoritmo genetico: 00:00:20.566
+La funzione non è valida.
+Algoritmo Quine-McCluskey: 00:00:00.003
+La funzione è valida.
+Advanced Simplifier by LogicNG: 00:00:00.035
+La funzione è valida.
+	Funzione con 4 variabili di input:
+Algoritmo genetico: 00:00:35.788
+La funzione non è valida.
+Algoritmo Quine-McCluskey: 00:00:00.001
+La funzione è valida.
+Advanced Simplifier by LogicNG: 00:00:00.039
+La funzione è valida.
+	Funzione con 5 variabili di input:
+Algoritmo genetico: 00:01:22.528
+La funzione non è valida.
+Algoritmo Quine-McCluskey: 00:00:00.001
+La funzione è valida.
+Advanced Simplifier by LogicNG: 00:00:00.045
+La funzione è valida.
+	Funzione con 6 variabili di input:
+Algoritmo genetico: 00:04:03.916
+La funzione non è valida.
+Advanced Simplifier by LogicNG: 00:00:00.135
+La funzione è valida.
+	Funzione con 7 variabili di input:
+Algoritmo genetico: 00:10:43.945
+La funzione non è valida.
+Advanced Simplifier by LogicNG: 00:00:00.547
+La funzione è valida.
+	Funzione con 8 variabili di input:
+Algoritmo genetico: 00:26:47.467
+La funzione non è valida.
+Advanced Simplifier by LogicNG: 09:59:06.427
+La funzione è valida.
+------------   Fine esecuzione di un test --------------

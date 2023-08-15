@@ -18,7 +18,7 @@ public class Main {
     public static void main(String[] args) throws ParserException {
 
         for (int j = 0; j < 10; j++) {// ciclo per fare 10 test.
-            for (int i = 2; i < 10; i++) {  // ciclo sul numero di variabili.
+            for (int i = 2; i < 9; i++) {  // ciclo sul numero di variabili.
                 System.out.println("\tFunzione con " + i + " variabili di input:");
 
                 TabellaDiVerita tabellaDiVerita = new TabellaDiVerita(i);
