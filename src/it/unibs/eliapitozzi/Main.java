@@ -22,15 +22,15 @@ public class Main {
                 System.out.println("\tFunzione con " + i + " variabili di input:");
 
                 TabellaDiVerita tabellaDiVerita = new TabellaDiVerita(i);
-                StopWatch watch = StopWatch.create();
+                //StopWatch watch = StopWatch.create();
 
-                watch.start();
+                //watch.start();
                 String function1 = AlgoritmoGenetico.run(tabellaDiVerita);
-                watch.stop();
-                System.out.println("Algoritmo genetico: " + watch);
+                //watch.stop();
+                //System.out.println("Algoritmo genetico: " + watch);
                 esaminaFunzione(function1, tabellaDiVerita);
 
-                if (i <= 5) {
+                /*if (i <= 5) {
                     watch.reset();
                     watch.start();
                     QuineMcCluskey quineMcCluskey = new QuineMcCluskey(tabellaDiVerita.getVariabili(), tabellaDiVerita.getPosizioni());
@@ -56,7 +56,7 @@ public class Main {
                     System.out.println("Advanced Simplifier by LogicNG: " + watch);
                     String function3 = applied.toString();
                     esaminaFunzione(function3, tabellaDiVerita);
-                }
+                }*/
             }
             System.out.println("------------   Fine esecuzione di un test --------------");
         }

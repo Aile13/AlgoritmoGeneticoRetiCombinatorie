@@ -526,3 +526,244 @@ La funzione non è valida.
 Advanced Simplifier by LogicNG: 05:13:51.891
 La funzione è valida.
 ------------   Fine esecuzione di un test --------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	Funzione con 2 variabili di input:
+  tot ingressi: 4/4
+La funzione è valida.
+	Funzione con 3 variabili di input:
+  tot ingressi: 7/8
+La funzione non è valida.
+	Funzione con 4 variabili di input:
+  tot ingressi: 13/16
+La funzione non è valida.
+	Funzione con 5 variabili di input:
+  tot ingressi: 23/32
+La funzione non è valida.
+	Funzione con 6 variabili di input:
+  tot ingressi: 38/64
+La funzione non è valida.
+	Funzione con 7 variabili di input:
+  tot ingressi: 74/128
+La funzione non è valida.
+	Funzione con 8 variabili di input:
+  tot ingressi: 144/256
+La funzione non è valida.
+------------   Fine esecuzione di un test --------------
+	Funzione con 2 variabili di input:
+  tot ingressi: 4/4
+La funzione è valida.
+	Funzione con 3 variabili di input:
+  tot ingressi: 7/8
+La funzione non è valida.
+	Funzione con 4 variabili di input:
+  tot ingressi: 11/16
+La funzione non è valida.
+	Funzione con 5 variabili di input:
+  tot ingressi: 22/32
+La funzione non è valida.
+	Funzione con 6 variabili di input:
+  tot ingressi: 39/64
+La funzione non è valida.
+	Funzione con 7 variabili di input:
+  tot ingressi: 73/128
+La funzione non è valida.
+	Funzione con 8 variabili di input:
+  tot ingressi: 145/256
+La funzione non è valida.
+------------   Fine esecuzione di un test --------------
+	Funzione con 2 variabili di input:
+  tot ingressi: 4/4
+La funzione è valida.
+	Funzione con 3 variabili di input:
+  tot ingressi: 7/8
+La funzione non è valida.
+	Funzione con 4 variabili di input:
+  tot ingressi: 13/16
+La funzione non è valida.
+	Funzione con 5 variabili di input:
+  tot ingressi: 24/32
+La funzione non è valida.
+	Funzione con 6 variabili di input:
+  tot ingressi: 40/64
+La funzione non è valida.
+	Funzione con 7 variabili di input:
+  tot ingressi: 73/128
+La funzione non è valida.
+	Funzione con 8 variabili di input:
+  tot ingressi: 138/256
+La funzione non è valida.
+------------   Fine esecuzione di un test --------------
+	Funzione con 2 variabili di input:
+  tot ingressi: 4/4
+La funzione è valida.
+	Funzione con 3 variabili di input:
+  tot ingressi: 7/8
+La funzione non è valida.
+	Funzione con 4 variabili di input:
+  tot ingressi: 12/16
+La funzione non è valida.
+	Funzione con 5 variabili di input:
+  tot ingressi: 22/32
+La funzione non è valida.
+	Funzione con 6 variabili di input:
+  tot ingressi: 43/64
+La funzione non è valida.
+	Funzione con 7 variabili di input:
+  tot ingressi: 82/128
+La funzione non è valida.
+	Funzione con 8 variabili di input:
+  tot ingressi: 138/256
+La funzione non è valida.
+------------   Fine esecuzione di un test --------------
+	Funzione con 2 variabili di input:
+  tot ingressi: 4/4
+La funzione è valida.
+	Funzione con 3 variabili di input:
+  tot ingressi: 8/8
+La funzione è valida.
+	Funzione con 4 variabili di input:
+  tot ingressi: 14/16
+La funzione non è valida.
+	Funzione con 5 variabili di input:
+  tot ingressi: 19/32
+La funzione non è valida.
+	Funzione con 6 variabili di input:
+  tot ingressi: 41/64
+La funzione non è valida.
+	Funzione con 7 variabili di input:
+  tot ingressi: 77/128
+La funzione non è valida.
+	Funzione con 8 variabili di input:
+  tot ingressi: 144/256
+La funzione non è valida.
+------------   Fine esecuzione di un test --------------
+	Funzione con 2 variabili di input:
+  tot ingressi: 4/4
+La funzione è valida.
+	Funzione con 3 variabili di input:
+  tot ingressi: 7/8
+La funzione non è valida.
+	Funzione con 4 variabili di input:
+  tot ingressi: 12/16
+La funzione non è valida.
+	Funzione con 5 variabili di input:
+  tot ingressi: 25/32
+La funzione non è valida.
+	Funzione con 6 variabili di input:
+  tot ingressi: 41/64
+La funzione non è valida.
+	Funzione con 7 variabili di input:
+  tot ingressi: 78/128
+La funzione non è valida.
+	Funzione con 8 variabili di input:
+  tot ingressi: 149/256
+La funzione non è valida.
+------------   Fine esecuzione di un test --------------
+	Funzione con 2 variabili di input:
+  tot ingressi: 4/4
+La funzione è valida.
+	Funzione con 3 variabili di input:
+  tot ingressi: 7/8
+La funzione non è valida.
+	Funzione con 4 variabili di input:
+  tot ingressi: 13/16
+La funzione non è valida.
+	Funzione con 5 variabili di input:
+  tot ingressi: 22/32
+La funzione non è valida.
+	Funzione con 6 variabili di input:
+  tot ingressi: 39/64
+La funzione non è valida.
+	Funzione con 7 variabili di input:
+  tot ingressi: 74/128
+La funzione non è valida.
+	Funzione con 8 variabili di input:
+  tot ingressi: 147/256
+La funzione non è valida.
+------------   Fine esecuzione di un test --------------
+	Funzione con 2 variabili di input:
+  tot ingressi: 4/4
+La funzione non è valida.
+	Funzione con 3 variabili di input:
+  tot ingressi: 7/8
+La funzione non è valida.
+	Funzione con 4 variabili di input:
+  tot ingressi: 14/16
+La funzione non è valida.
+	Funzione con 5 variabili di input:
+  tot ingressi: 25/32
+La funzione non è valida.
+	Funzione con 6 variabili di input:
+  tot ingressi: 42/64
+La funzione non è valida.
+	Funzione con 7 variabili di input:
+  tot ingressi: 78/128
+La funzione non è valida.
+	Funzione con 8 variabili di input:
+  tot ingressi: 150/256
+La funzione non è valida.
+------------   Fine esecuzione di un test --------------
+	Funzione con 2 variabili di input:
+  tot ingressi: 4/4
+La funzione è valida.
+	Funzione con 3 variabili di input:
+  tot ingressi: 7/8
+La funzione non è valida.
+	Funzione con 4 variabili di input:
+  tot ingressi: 13/16
+La funzione non è valida.
+	Funzione con 5 variabili di input:
+  tot ingressi: 21/32
+La funzione non è valida.
+	Funzione con 6 variabili di input:
+  tot ingressi: 41/64
+La funzione non è valida.
+	Funzione con 7 variabili di input:
+  tot ingressi: 74/128
+La funzione non è valida.
+	Funzione con 8 variabili di input:
+  tot ingressi: 146/256
+La funzione non è valida.
+------------   Fine esecuzione di un test --------------
+	Funzione con 2 variabili di input:
+  tot ingressi: 4/4
+La funzione è valida.
+	Funzione con 3 variabili di input:
+  tot ingressi: 6/8
+La funzione non è valida.
+	Funzione con 4 variabili di input:
+  tot ingressi: 13/16
+La funzione non è valida.
+	Funzione con 5 variabili di input:
+  tot ingressi: 22/32
+La funzione non è valida.
+	Funzione con 6 variabili di input:
+  tot ingressi: 39/64
+La funzione non è valida.
+	Funzione con 7 variabili di input:
+  tot ingressi: 73/128
+La funzione non è valida.
+	Funzione con 8 variabili di input:
+  tot ingressi: 148/256
+La funzione non è valida.
+------------   Fine esecuzione di un test --------------
+

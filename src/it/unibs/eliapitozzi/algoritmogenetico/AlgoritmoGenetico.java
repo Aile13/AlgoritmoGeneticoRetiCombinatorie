@@ -28,6 +28,7 @@ public class AlgoritmoGenetico {
         }
 
         ReteCombinatoria miglioreIndividuo = generazione.getMiglioreIndividuo(tabellaDiVerita);
+        System.out.println("  tot ingressi: " + miglioreIndividuo.getTotaleIngressiGiusti() + "/" + tabellaDiVerita.getTotaleRighe());
         return miglioreIndividuo.getFunction();
     }
 }
